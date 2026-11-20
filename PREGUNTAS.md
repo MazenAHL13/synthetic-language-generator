@@ -30,6 +30,22 @@ Cada pregunta da la regla afectada, el problema y una propuesta. Mientras nadie 
 - **Problema.** El nuevo ejemplo de la regla 5 dice "eso es pan" (demostrativo neutro). Pero la regla 1 y el ejemplo `Aka-xa chimula-wa.` → "Esta es una casa." hacen que el demostrativo concuerde con el nombre. Con esa regla sale "Ese es pan.".
 - **Propuesta.** Se mantiene la concordancia, que es lo que hacen el prototipo y la regla 1: "Ese es pan.". Si el equipo quiere el neutro ("esto / eso / aquello") con nombres no contables, hay que decirlo en una regla.
 
+### P-10 · Transición frente a la cuota de persona (CH-1104, CH-1109)
+- **Problema.** CH-1104 fija la persona del sujeto en la cuota. CH-1109 dice que "se elige primero la transición; fija la persona del sujeto". Las dos cosas no pueden pasar a la vez.
+- **Propuesta.** Manda la cuota (CH-1104). En SIMP, con un verbo `obj_persona = s`, la transición se sortea solo entre `objeto_3` y las transiciones cuyo sujeto es la persona de la cuota, renormalizando los pesos. Con persona 4 no hay transición. Así, las transiciones salen algo menos que el 7 % cada una.
+
+### P-11 · Zipf entre categorías de verbos (CH-403)
+- **Problema.** CH-403 define Zipf dentro de cada categoría. Para elegir el verbo de una idea hay que mezclar `V_INTR`, `V_MOV`, `V_TR` y `V_DITR`, y no se dice cuánto pesa cada categoría.
+- **Propuesta.** Zipf sobre todas las candidatas juntas, ordenadas por (rango, id). Los verbos de rango 1 de cada categoría pesan lo mismo. Lo mismo vale para los nombres cuando se aceptan `N_HUM` y `N_NOHUM`.
+
+### P-12 · Adverbio de tiempo con "ser", "estar" y "tener" (CH-901, CH-1011)
+- **Problema.** CH-901 dice que en estos predicados "no hay posiciones 4 a 7", así que la posición 3 (tiempo) quedaría permitida. Pero CH-1011 ("sujeto – verbo – predicado") y el español del prototipo no escriben el adverbio: "Yo tengo pan ayer" saldría sin "ayer" en español.
+- **Propuesta.** Estos predicados no llevan `adv_t`. El validador lo rechaza (CH-908) y el generador no lo sortea.
+
+### P-13 · COM: ¿instrumento o compañía? (CH-406, CH-1111)
+- **Problema.** `pesos.yaml` da COM 0,70 / CAUSE 0,30, pero no dice cómo elegir entre instrumento y compañía cuando un verbo admite las dos.
+- **Propuesta.** Si el verbo tiene `instr_clases`, COM es instrumento. Si no, es compañía (`persona` o `animal`; solo `V_MOV` y `V_INTR` con sujeto `persona`).
+
 ## Decisiones tomadas
 
 - **20-11-2026 · P-07 resuelta (§10).** El borrador de las conjugaciones forma parte de la tarea. La celda 7.2 genera `datos/conjugaciones.csv` con un conjugador propio, sin bibliotecas: regulares, cambios de vocal, cambios de escritura y una tabla de irregulares. Cada fila nueva lleva `revisado = n`; el notebook avisa sin detenerse, y las filas que ya existen no se tocan nunca. Control: para los 10 verbos del prototipo da exactamente sus formas. El error claro queda solo para los verbos que no están en la tabla. Lo decidió el responsable del proyecto.
