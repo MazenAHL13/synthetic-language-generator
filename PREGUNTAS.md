@@ -26,6 +26,14 @@ Cada pregunta da la regla afectada, el problema y una propuesta. Mientras nadie 
 - **Problema.** `lexico_sin_raices.csv` no está. Según lo pedido, se usan las 25 entradas de §4.1, que ya traen raíz. Los 40 casos de `casos_prueba.json` esperan justo esas raíces (`lisqu`, `ch'ixra`…). Cuando llegue el léxico real, el generador de raíces dará otras y los 40 casos fallarían.
 - **Propuesta.** (a) Con el respaldo de §4.1, las raíces de la especificación se conservan y solo se validan (CH-201 a CH-310). (b) Los 40 casos siempre se prueban con un léxico fijo de prueba (§4.1 + LV01–LV18), aparte del léxico de producción.
 
+### P-07 · Conjugaciones del español (§10, CH-1001 a CH-1005)
+- **Problema.** §10 pide "un conjugador verificado" para cada verbo de `lexico.csv` (presente, pretérito, futuro, participio y gerundio, con irregulares). `lexico.csv` no trae esas formas y no hay ningún archivo que las dé. El prototipo solo conjuga los 10 verbos de prueba.
+- **Propuesta.** Que el rol de español entregue `datos/conjugaciones.csv` con las columnas `verbo,pres,pret,fut,part,ger,refl`. Cada tiempo lleva sus 5 formas (1sg, 2sg, 3sg, 1pl, 3pl) separadas por espacios, y `refl` vale `s` o `n`. Mientras tanto, la sección 7 usa la tabla del prototipo. Además avisa de cada verbo sin conjugación, y escribir su oración da un error claro (no se inventan formas).
+
+### P-08 · Artículo del predicado de "ser" con nombre no contable (CH-1008, regla 5)
+- **Problema.** La regla 5 dice "nombre no humano: un/una en singular", sin excepción para los no contables. El prototipo no ponía artículo si el nombre no es contable ("Eso es pan"). La regla 6 ("tener") sí distingue los contables.
+- **Propuesta.** Se sigue el texto de la especificación ("Eso es un pan"). Ninguno de los 40 casos usa este caso. Si el equipo prefiere "Eso es pan", en la v1.2 añadir a la regla 5 "si es contable", como en la regla 6.
+
 ## Decisiones tomadas
 
 - **20-11-2026 · P-04 resuelta (CH-306).** El equipo entregó `datos/palabras_reales.txt`. La sección 6 aplica el filtro con esa lista. Queda abierto el modo (P-06).
@@ -33,4 +41,7 @@ Cada pregunta da la regla afectada, el problema y una propuesta. Mientras nadie 
 
 ## Errores del prototipo corregidos
 
-- Ninguno por ahora. El motor (`chulupi_motor.py`) da las mismas salidas que la especificación en los 102 casos de CH-710, los 64 paradigmas y los 16 ejemplos de §7.1.
+- **Motor.** Ninguno. El motor (`chulupi_motor.py`) da las mismas salidas que la especificación en los 102 casos de CH-710, los 64 paradigmas y los 16 ejemplos de §7.1.
+- **`chulupi_oraciones.py`, `genero_np` (incumplía CH-1010).** Por la precedencia de `or … if … else`, un nombre de género fijo tomaba el `genero` de la idea: `{"n": "L0004", "genero": "m"}` daba "el mujer". Corregido en la sección 7: el campo solo cuenta si el nombre es `var`.
+- **`chulupi_oraciones.py`, "ser" + adjetivo (incumplía CH-405).** El adjetivo concordaba con `sujeto.genero`, que no existe en sujetos no humanos: "La casa es rojo". Corregido: con un sujeto nombre, concuerda con el género de ese nombre ("La casa es roja").
+- Ninguna de las dos correcciones cambia los 40 casos de CH-1201.
