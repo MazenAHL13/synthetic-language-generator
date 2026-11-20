@@ -26,16 +26,14 @@ Cada pregunta da la regla afectada, el problema y una propuesta. Mientras nadie 
 - **Problema.** `lexico_sin_raices.csv` no está. Según lo pedido, se usan las 25 entradas de §4.1, que ya traen raíz. Los 40 casos de `casos_prueba.json` esperan justo esas raíces (`lisqu`, `ch'ixra`…). Cuando llegue el léxico real, el generador de raíces dará otras y los 40 casos fallarían.
 - **Propuesta.** (a) Con el respaldo de §4.1, las raíces de la especificación se conservan y solo se validan (CH-201 a CH-310). (b) Los 40 casos siempre se prueban con un léxico fijo de prueba (§4.1 + LV01–LV18), aparte del léxico de producción.
 
-### P-07 · Conjugaciones del español (§10, CH-1001 a CH-1005)
-- **Problema.** §10 pide "un conjugador verificado" para cada verbo de `lexico.csv` (presente, pretérito, futuro, participio y gerundio, con irregulares). `lexico.csv` no trae esas formas y no hay ningún archivo que las dé. El prototipo solo conjuga los 10 verbos de prueba.
-- **Propuesta.** Que el rol de español entregue `datos/conjugaciones.csv` con las columnas `verbo,pres,pret,fut,part,ger,refl`. Cada tiempo lleva sus 5 formas (1sg, 2sg, 3sg, 1pl, 3pl) separadas por espacios, y `refl` vale `s` o `n`. Mientras tanto, la sección 7 usa la tabla del prototipo. Además avisa de cada verbo sin conjugación, y escribir su oración da un error claro (no se inventan formas).
-
-### P-08 · Artículo del predicado de "ser" con nombre no contable (CH-1008, regla 5)
-- **Problema.** La regla 5 dice "nombre no humano: un/una en singular", sin excepción para los no contables. El prototipo no ponía artículo si el nombre no es contable ("Eso es pan"). La regla 6 ("tener") sí distingue los contables.
-- **Propuesta.** Se sigue el texto de la especificación ("Eso es un pan"). Ninguno de los 40 casos usa este caso. Si el equipo prefiere "Eso es pan", en la v1.2 añadir a la regla 5 "si es contable", como en la regla 6.
+### P-09 · Demostrativo sujeto de "ser": "eso" o "ese" (CH-1008, regla 1 y regla 5)
+- **Problema.** El nuevo ejemplo de la regla 5 dice "eso es pan" (demostrativo neutro). Pero la regla 1 y el ejemplo `Aka-xa chimula-wa.` → "Esta es una casa." hacen que el demostrativo concuerde con el nombre. Con esa regla sale "Ese es pan.".
+- **Propuesta.** Se mantiene la concordancia, que es lo que hacen el prototipo y la regla 1: "Ese es pan.". Si el equipo quiere el neutro ("esto / eso / aquello") con nombres no contables, hay que decirlo en una regla.
 
 ## Decisiones tomadas
 
+- **20-11-2026 · P-07 resuelta (§10).** El borrador de las conjugaciones forma parte de la tarea. La celda 7.2 genera `datos/conjugaciones.csv` con un conjugador propio, sin bibliotecas: regulares, cambios de vocal, cambios de escritura y una tabla de irregulares. Cada fila nueva lleva `revisado = n`; el notebook avisa sin detenerse, y las filas que ya existen no se tocan nunca. Control: para los 10 verbos del prototipo da exactamente sus formas. El error claro queda solo para los verbos que no están en la tabla. Lo decidió el responsable del proyecto.
+- **20-11-2026 · P-08 resuelta (CH-1008, regla 5).** Era un error de la especificación; el prototipo tenía razón. La regla 5 pasa a decir: "nombre no humano: 'un / una' si es contable y singular; nada si es plural o no contable". Se corrigió en `datos/artificial_lang_spec.md` y en el notebook, con una prueba ("Ese es pan."). Lo decidió el responsable del proyecto.
 - **20-11-2026 · P-04 resuelta (CH-306).** El equipo entregó `datos/palabras_reales.txt`. La sección 6 aplica el filtro con esa lista. Queda abierto el modo (P-06).
 - **20-11-2026 · Lugar de los 40 casos (CH-1201).** Necesitan el constructor de oraciones (sección 8). La sección 4 prueba CH-710. Los 40 casos van al final de la sección 8, y la sección 10 repite todas las pruebas antes de generar. Lo decidió el responsable del proyecto.
 

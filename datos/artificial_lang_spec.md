@@ -2522,7 +2522,7 @@ Base: §6 (el aymara no tiene artículos). Regla fija, por orden de prioridad:
 3. Con posesivo y sin poseedor: "mi, tu, su, nuestro…".
 4. Con poseedor: artículo definido + nombre + "de" + poseedor ("la casa del maestro").
 5. Predicado de "ser":
-   - nombre no humano: "un / una" en singular, nada en plural ("es una casa", "son casas");
+   - nombre no humano: "un / una" si es contable y singular; nada si es plural o no contable ("es una casa", "son casas", "eso es pan");
    - nombre humano: sin artículo ("eres maestra").
 6. Lo poseído en "tener": "un / una" si es contable y singular; nada si es plural o no contable ("tengo una casa", "tengo casas", "tengo pan").
 7. Objeto directo no contable, sin otro determinante: sin artículo ("come pan").
