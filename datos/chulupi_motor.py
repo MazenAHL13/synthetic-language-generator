@@ -104,7 +104,7 @@ MORFEMAS = {
 # CH-505: palabras gramaticales (forma B -> forma A)
 GRAMATICALES = {
     "naya": "muqi", "juma": "tilu", "jupa": "kaxi", "jiwasa": "wiqutu", "nänaka": "müsulu",
-    "jani": "yuli", "khiti": "simu", "kuna": "mulu", "kawki": "yaqu",
+    "jani": "yuli", "khiti": "simu", "kuna": "sipu", "kawki": "yaqu",
     "aka": "ilmi", "uka": "ulmi", "khuri": "phiqa",
     "kimsa": "musqi", "pusi": "tayli", "suxta": "wichqa", "tunka": "qanti",
 }

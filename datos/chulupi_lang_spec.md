@@ -1,6 +1,6 @@
 # Chulupi Lang — Especificación v1
 
-**Versión:** 1.1.1 (CH-406: BEN solo con `V_TR` y `V_DITR`; CH-1103: R21 y R22; `pesos.yaml`: `categoria_verbo` y `oi_V_TR`; CH-1008, regla 5: no contables sin artículo). La 1.1 corrigió la parte 1 de la 1.0 (CH-104, CH-306, CH-308) y añadió CH-406 y CH-407 · **Fuente única:** `guia_estructural_aymara_v3.md` (en adelante, "la guía").
+**Versión:** 1.1.2 (INT.QUE en modo A = `sipu`; ADV_T `pasado_remoto` (CH-917, CH-1001); CAUSE solo con `V_MOV` y `V_INTR`; columna `admite_ben`; las frases de lugar no llevan numeral; `pesos.yaml`: `sujeto_clase_humana`). La 1.1.1: (CH-406: BEN solo con `V_TR` y `V_DITR`; CH-1103: R21 y R22; `pesos.yaml`: `categoria_verbo` y `oi_V_TR`; CH-1008, regla 5: no contables sin artículo). La 1.1 corrigió la parte 1 de la 1.0 (CH-104, CH-306, CH-308) y añadió CH-406 y CH-407 · **Fuente única:** `guia_estructural_aymara_v3.md` (en adelante, "la guía").
 **Para quién:** el equipo que programa el generador. No hace falta saber lingüística: cada regla dice qué hacer, con ejemplos.
 
 ## Cómo leer este documento
@@ -614,7 +614,7 @@ Base: §7.3 A (COMPL.RU), §2 (casos), D9, §13 #7.
 | `V_TR` | Verbo transitivo ("comer", "ver") | OD obligatorio en X>3 (CH-915). Con `obj_persona = s`, admite transiciones con objeto 1/2/4 (CH-604). |
 | `V_DITR` | Verbo con destinatario ("dar") | Como `V_TR`, y además admite COMPL.RU (`rige_ru = s`, CH-909). Sus transiciones con objeto 1/2/4 marcan al destinatario. |
 | `ADJ` | Adjetivo; `subcat` = `tamano`, `color` u `otro` | Va antes del nombre (CH-912) y puede ser predicado de "ser". Solo modifica nombres de las clases de su `mod_clases` (CH-406). |
-| `ADV_T` | Adverbio de tiempo; `subcat` = `pasado`, `presente` o `futuro` | Limita el tiempo verbal y decide el tiempo español del SIMP (CH-1001). |
+| `ADV_T` | Adverbio de tiempo; `subcat` = `pasado`, `pasado_remoto`, `presente` o `futuro` | Limita el tiempo verbal y decide el tiempo español del SIMP (CH-1001). |
 
 No están en el léxico:
 - **Adverbios de lugar.** "Aquí", "ahí" y "más allá" son demostrativo + LOC (CH-916).
@@ -640,7 +640,7 @@ Ejemplo de CH-401 (`V_MOV` + ALL):
 |---|---|---|
 | `id` | `L0001`… | Clave única |
 | `cat` | `N_HUM`, `N_NOHUM`, `V_INTR`, `V_MOV`, `V_TR`, `V_DITR`, `ADJ`, `ADV_T` | CH-401 |
-| `subcat` | ADJ: `tamano`/`color`/`otro`; ADV_T: `pasado`/`presente`/`futuro`; resto: `-` | CH-401 |
+| `subcat` | ADJ: `tamano`/`color`/`otro`; ADV_T: `pasado`/`pasado_remoto`/`presente`/`futuro`; resto: `-` | CH-401 |
 | `clase_sem` | Nombres: una clase de CH-406; resto: `-` | CH-406 |
 | `es_m` | Forma base española: masculino singular, o infinitivo en los verbos | §10 |
 | `es_f` | Femenino singular (`N_HUM` con `genero = var` y `ADJ`); vacío en el resto | §10 |
@@ -652,6 +652,7 @@ Ejemplo de CH-401 (`V_MOV` + ALL):
 | `rango` | Rango de frecuencia dentro de la categoría (1 = más frecuente) | CH-403 |
 | `rige_ru` | Verbos: `s`/`n` (solo `V_DITR` puede ser `s`); resto: `-` | CH-909 |
 | `obj_persona` | `V_TR` y `V_DITR`: `s`/`n`; resto: `-` | CH-604 |
+| `admite_ben` | `V_TR` y `V_DITR`: `s`/`n` (BEN solo si es `s`); resto: `-` | CH-406 (v1.1.2) |
 | `suj_clases` | Verbos: lista obligatoria de clases del sujeto; resto: `-` | CH-406 |
 | `obj_clases` | `V_TR` y `V_DITR`: lista obligatoria de clases del OD (nunca `persona`); resto: `-` | CH-406, CH-914 |
 | `instr_clases` | Verbos: clases aceptadas como instrumento con COM; `-` = el verbo no admite instrumento | CH-406 |
@@ -731,13 +732,13 @@ Base: decisión del equipo (v1.1). Un lenguaje artificial cuyas palabras co-ocur
 | Sujeto | `suj_clases` del verbo. Los pronombres de 1.ª, 2.ª y 4.ª persona y `jupa` cuentan como `persona`. |
 | Objeto directo | `obj_clases` del verbo; nunca `persona` (CH-914). |
 | COMPL.RU | `persona` (CH-909). |
-| BEN | `persona`; solo con `V_TR` y `V_DITR` (v1.1.1). `V_MOV` y `V_INTR` no llevan objeto indirecto. |
+| BEN | `persona`; solo con `V_TR` y `V_DITR` con `admite_ben = s` (v1.1.2). `V_MOV` y `V_INTR` no llevan objeto indirecto. |
 | COM, instrumento | `instr_clases` del verbo; si es `-`, el verbo no admite instrumento. |
 | COM, compañía | `persona` o `animal`; solo con `V_MOV` o `V_INTR` y sujeto de clase `persona`. |
 | LOC | `loc_clases` del verbo; si es `-`: `lugar` o `vivienda`; si es `NINGUNA`: no admite LOC. Los `V_MOV` llevan siempre `NINGUNA`. |
 | ALL, ABL | `lugar` o `vivienda` (solo con `V_MOV`). |
 | UNTIL | `lugar`, `vivienda` o `tiempo` (solo con `V_MOV`; además CH-514). |
-| CAUSE | `abstracto`, o `persona` (nombre o pronombre). |
+| CAUSE | `abstracto`, o `persona` (nombre o pronombre); solo con `V_MOV` y `V_INTR` (v1.1.2). |
 | Adjetivo (modificador o predicado de "ser") | `mod_clases` del adjetivo. |
 | Poseedor (GEN) | `persona`. |
 | Poseído | Cualquier clase salvo `tiempo`. |
@@ -787,32 +788,33 @@ Ejemplo, con uno de los 30 `ADV_T`:
 Estas raíces son **ejemplos**. Cumplen CH-201 a CH-310 contra la guía. Cuando llegue la lista de AmericasNLP, el filtro CH-306 puede reemplazar alguna; los ejemplos de este documento se regenerarán con el léxico final.
 
 ```csv
-id,cat,subcat,clase_sem,es_m,es_f,es_pl_m,es_pl_f,genero,contable,raiz,silabas,rango,rige_ru,obj_persona,suj_clases,obj_clases,instr_clases,loc_clases,mod_clases,notas
-L0001,N_HUM,-,persona,niño,niña,niños,niñas,var,s,lisqu,2,1,-,-,-,-,-,-,-,
-L0002,N_HUM,-,persona,hermano,hermana,hermanos,hermanas,var,s,pultiya,3,2,-,-,-,-,-,-,-,
-L0003,N_HUM,-,persona,maestro,maestra,maestros,maestras,var,s,yaruqhi,3,3,-,-,-,-,-,-,-,
-L0004,N_HUM,-,persona,mujer,,mujeres,,f,s,simlla,2,4,-,-,-,-,-,-,-,
-L0005,N_NOHUM,-,vivienda,casa,,casas,,f,s,chimula,3,1,-,-,-,-,-,-,-,
-L0006,N_NOHUM,-,comida,pan,,panes,,m,n,q'aspi,2,2,-,-,-,-,-,-,-,
-L0007,N_NOHUM,-,lugar,pueblo,,pueblos,,m,s,wirkha,2,3,-,-,-,-,-,-,-,
-L0008,N_NOHUM,-,animal,perro,,perros,,m,s,kirpu,2,4,-,-,-,-,-,-,-,
-L0009,N_NOHUM,-,lugar,mercado,,mercados,,m,s,pinqara,3,5,-,-,-,-,-,-,-,
-L0010,N_NOHUM,-,herramienta,palo,,palos,,m,s,salmi,2,6,-,-,-,-,-,-,-,
-L0011,N_NOHUM,-,herramienta,cuchillo,,cuchillos,,m,s,jitqu,2,7,-,-,-,-,-,-,-,
-L0012,N_NOHUM,-,abstracto,deuda,,deudas,,f,s,ch'alqu,2,8,-,-,-,-,-,-,-,
-L0013,V_MOV,-,-,ir,,,,-,-,tisqa,2,1,n,-,persona|animal,-,-,NINGUNA,-,
-L0014,V_MOV,-,-,venir,,,,-,-,pajlla,2,2,n,-,persona|animal,-,-,NINGUNA,-,
-L0015,V_INTR,-,-,dormir,,,,-,-,nuyk'a,2,1,n,-,persona|animal,-,-,-,-,
-L0016,V_TR,-,-,comer,,,,-,-,lamch'a,2,1,n,n,persona|animal,comida,herramienta,-,-,
-L0017,V_TR,-,-,ver,,,,-,-,ch'ixra,2,2,n,s,persona|animal,animal|comida|bebida|ropa|herramienta|recipiente|planta|vivienda|objeto,-,-,-,
-L0018,V_DITR,-,-,dar,,,,-,-,tulpha,2,1,s,s,persona,comida|bebida|ropa|herramienta|recipiente|animal|planta|objeto,-,-,-,
-L0019,V_TR,-,-,comprar,,,,-,-,nirqa,2,3,n,n,persona,comida|bebida|ropa|herramienta|recipiente|animal,-,-,-,
-L0020,V_TR,-,-,cortar,,,,-,-,k'iyma,2,4,n,n,persona,comida|planta|ropa,herramienta,-,-,
-L0021,ADJ,tamano,-,grande,grande,grandes,grandes,-,-,jumpu,2,1,-,-,-,-,-,-,persona|animal|comida|ropa|herramienta|recipiente|planta|lugar|vivienda|objeto,
-L0022,ADJ,color,-,rojo,roja,rojos,rojas,-,-,q'ulli,2,2,-,-,-,-,-,-,animal|comida|bebida|ropa|herramienta|recipiente|planta|vivienda|objeto,
-L0023,ADV_T,pasado,-,ayer,,,,-,-,jaskhi,2,1,-,-,-,-,-,-,-,
-L0024,ADV_T,futuro,-,mañana,,,,-,-,sik'uyu,3,2,-,-,-,-,-,-,-,
-L0025,ADV_T,presente,-,ahora,,,,-,-,nuspi,2,3,-,-,-,-,-,-,-,
+id,cat,subcat,clase_sem,es_m,es_f,es_pl_m,es_pl_f,genero,contable,raiz,silabas,rango,rige_ru,obj_persona,admite_ben,suj_clases,obj_clases,instr_clases,loc_clases,mod_clases,notas
+L0001,N_HUM,-,persona,niño,niña,niños,niñas,var,s,lisqu,2,1,-,-,-,-,-,-,-,-,
+L0002,N_HUM,-,persona,hermano,hermana,hermanos,hermanas,var,s,pultiya,3,2,-,-,-,-,-,-,-,-,
+L0003,N_HUM,-,persona,maestro,maestra,maestros,maestras,var,s,yaruqhi,3,3,-,-,-,-,-,-,-,-,
+L0004,N_HUM,-,persona,mujer,,mujeres,,f,s,simlla,2,4,-,-,-,-,-,-,-,-,
+L0005,N_NOHUM,-,vivienda,casa,,casas,,f,s,chimula,3,1,-,-,-,-,-,-,-,-,
+L0006,N_NOHUM,-,comida,pan,,panes,,m,n,q'aspi,2,2,-,-,-,-,-,-,-,-,
+L0007,N_NOHUM,-,lugar,pueblo,,pueblos,,m,s,wirkha,2,3,-,-,-,-,-,-,-,-,
+L0008,N_NOHUM,-,animal,perro,,perros,,m,s,kirpu,2,4,-,-,-,-,-,-,-,-,
+L0009,N_NOHUM,-,lugar,mercado,,mercados,,m,s,pinqara,3,5,-,-,-,-,-,-,-,-,
+L0010,N_NOHUM,-,herramienta,palo,,palos,,m,s,salmi,2,6,-,-,-,-,-,-,-,-,
+L0011,N_NOHUM,-,herramienta,cuchillo,,cuchillos,,m,s,jitqu,2,7,-,-,-,-,-,-,-,-,
+L0012,N_NOHUM,-,abstracto,deuda,,deudas,,f,s,ch'alqu,2,8,-,-,-,-,-,-,-,-,
+L0013,V_MOV,-,-,ir,,,,-,-,tisqa,2,1,n,-,-,persona|animal,-,-,NINGUNA,-,
+L0014,V_MOV,-,-,venir,,,,-,-,pajlla,2,2,n,-,-,persona|animal,-,-,NINGUNA,-,
+L0015,V_INTR,-,-,dormir,,,,-,-,nuyk'a,2,1,n,-,-,persona|animal,-,-,-,-,
+L0016,V_TR,-,-,comer,,,,-,-,lamch'a,2,1,n,n,n,persona|animal,comida,herramienta,-,-,
+L0017,V_TR,-,-,ver,,,,-,-,ch'ixra,2,2,n,s,n,persona|animal,animal|comida|bebida|ropa|herramienta|recipiente|planta|vivienda|objeto,-,-,-,
+L0018,V_DITR,-,-,dar,,,,-,-,tulpha,2,1,s,s,s,persona,comida|bebida|ropa|herramienta|recipiente|animal|planta|objeto,-,-,-,
+L0019,V_TR,-,-,comprar,,,,-,-,nirqa,2,3,n,n,s,persona,comida|bebida|ropa|herramienta|recipiente|animal,-,-,-,
+L0020,V_TR,-,-,cortar,,,,-,-,k'iyma,2,4,n,n,s,persona,comida|planta|ropa,herramienta,-,-,
+L0021,ADJ,tamano,-,grande,grande,grandes,grandes,-,-,jumpu,2,1,-,-,-,-,-,-,-,persona|animal|comida|ropa|herramienta|recipiente|planta|lugar|vivienda|objeto,
+L0022,ADJ,color,-,rojo,roja,rojos,rojas,-,-,q'ulli,2,2,-,-,-,-,-,-,-,animal|comida|bebida|ropa|herramienta|recipiente|planta|vivienda|objeto,
+L0023,ADV_T,pasado,-,ayer,,,,-,-,jaskhi,2,1,-,-,-,-,-,-,-,-,
+L0024,ADV_T,futuro,-,mañana,,,,-,-,sik'uyu,3,2,-,-,-,-,-,-,-,-,
+L0025,ADV_T,presente,-,ahora,,,,-,-,nuspi,2,3,-,-,-,-,-,-,-,-,
+L0026,ADV_T,pasado_remoto,-,antes,,,,-,-,lasmiq'a,3,4,-,-,-,-,-,-,-,-,entrada de prueba v1.1.2: raíz generada por §3
 ```
 
 Ejemplo con entradas de la tabla (LOC + `V_INTR`; `chimula` es `vivienda`, aceptada por la regla general de LOC):
@@ -983,7 +985,7 @@ Base: §2 (pronombres, demostrativos; L1 p.182–183), D12 (plurales de L2), §6
 | PRON.4 | tú y yo | `jiwasa` | `wiqutu` | 3 | ídem + PL | §2; D12 |
 | NEG.PAL | no | `jani` | `yuli` | 2 | solo AFF | §3.3; §7.3 B |
 | INT.QUIEN | quién | `khiti` | `simu` | 2 | Q.INF; COMPL.RU + Q.INF | §6; L2 p.231 (`khitisa`) |
-| INT.QUE | qué | `kuna` | `mulu` | 2 | Q.INF | §6; L1 p.282 |
+| INT.QUE | qué | `kuna` | `sipu` | 2 | Q.INF | §6; L1 p.282 |
 | INT.DONDE | dónde | `kawki` | `yaqu` | 2 | ALL + Q.INF; LOC + VBLZ.KA + persona + Q.INF | §6; L2 p.236 |
 | DEM.1 | este / aquí | `aka` | `ilmi` | 2 | sin sufijo (modificador); LOC; TOP (sujeto de "ser"); LOC + VBLZ.KA | §2 (L1 p.183) |
 | DEM.2 | ese / ahí | `uka` | `ulmi` | 2 | ídem | §2; L2 p.160 (`ukana`) |
@@ -1172,7 +1174,7 @@ palabras_gramaticales:
   - {id: PRON.4,    b: jiwasa,  a: wiqutu, persona: 4, admite: [PL, TOP, AFF, COMPL.RU, COM, BEN, CAUSE]}
   - {id: NEG.PAL,   b: jani,    a: yuli,   admite: [AFF]}
   - {id: INT.QUIEN, b: khiti,   a: simu,   admite: [Q.INF, "COMPL.RU+Q.INF"]}
-  - {id: INT.QUE,   b: kuna,    a: mulu,   admite: [Q.INF]}
+  - {id: INT.QUE,   b: kuna,    a: sipu,   admite: [Q.INF]}
   - {id: INT.DONDE, b: kawki,   a: yaqu,   admite: ["ALL+Q.INF", "LOC+VBLZ.KA+PERS+Q.INF"]}
   - {id: DEM.1,     b: aka,     a: ilmi,   admite: ["", LOC, TOP, "LOC+VBLZ.KA+PERS"]}
   - {id: DEM.2,     b: uka,     a: ulmi,   admite: ["", LOC, TOP, "LOC+VBLZ.KA+PERS"]}
@@ -2167,9 +2169,9 @@ Base: §4.1 (L2 p.231: "por lo general marca el sujeto"); §1 (L2 p.255: `Wasür
 3. Ninguna otra palabra lleva `-xa`.
 
 Ejemplo (regla 2):
-- B: `Jaskhi-xa pinqara-ta pajlla-tä-na-wa.` → `Jaskhixa pinqarata pajllatänawa.` — ayer-TOP mercado-ABL venir-REM.L-3-AFF.
-- A: `Jaskhixu pinqaraku pajllawümuyi.`
-- ES: "Había venido del mercado ayer."
+- B: `Lasmiq'a-xa pinqara-ta pajlla-tä-na-wa.` → `Lasmiq'axa pinqarata pajllatänawa.` — antes-TOP mercado-ABL venir-REM.L-3-AFF.
+- A: `Lasmiq'axu pinqaraku pajllawümuyi.`
+- ES: "Había venido del mercado antes." (v1.1.2: "ayer" es `pasado` y ya no va con REM.L; "antes" es `pasado_remoto`.)
 
 ### CH-904 · `-ti` de pregunta sí/no [DECISIÓN CHULUPI]
 
@@ -2204,7 +2206,7 @@ Base: §1 y §6 (L1 p.282: un solo `-sa` por oración; `kawki-ru-s`); L2 p.236 (
 | `interrogativo` | Reemplaza a | Forma B → A | Condiciones |
 |---|---|---|---|
 | `quien_suj` | sujeto | `khiti-sa` → `simu-khu` | sujeto de 3.ª singular; verbo `suj_clases` ∋ `persona` |
-| `que_od` | objeto directo | `kuna-sa` → `mulu-khu` | verbo `V_TR` o `V_DITR` en X>3 |
+| `que_od` | objeto directo | `kuna-sa` → `sipu-khu` | verbo `V_TR` o `V_DITR` en X>3 |
 | `donde_all` | lugar ALL | `kawki-ru-sa` → `yaqu-llu-khu` | verbo `V_MOV` |
 | `quien_oi` | COMPL.RU | `khiti-ru-sa` → `simu-llu-khu` | verbo `V_DITR` en X>3 |
 | `donde_estar` | predicado de "estar" | `kawki-n-k-PERS-sa` → `yaqu-m-ñ-PERS-khu` | solo "estar" |
@@ -2213,7 +2215,7 @@ Base: §1 y §6 (L1 p.282: un solo `-sa` por oración; `kawki-ru-s`); L2 p.236 (
 - Si hay sujeto expreso (y no es el interrogativo), lleva `-xa`.
 
 Ejemplos:
-- B: `¿Kirpu-xa kuna-sa lamch'-i?` → `¿Kirpuxa kunasa lamch'i?` — perro-TOP qué-Q.INF comer-3>3.SIMP. A: `¿Kirpuxu mulukhu lamch'u?` ES: "¿Qué come el perro?"
+- B: `¿Kirpu-xa kuna-sa lamch'-i?` → `¿Kirpuxa kunasa lamch'i?` — perro-TOP qué-Q.INF comer-3>3.SIMP. A: `¿Kirpuxu sipukhu lamch'u?` ES: "¿Qué come el perro?"
 - B: `¿Khiti-ru-sa q'aspi tulph-ta?` → `¿Khitirusa q'aspi tulphta?` — quién-COMPL.RU-Q.INF pan dar-2>3.SIMP. A: `¿Simullukhu q'aspi tulphku?` ES: "¿A quién le das pan?"
 - B: `¿Juma-xa kawki-n-k-ta-sa?` → `¿Jumaxa kawkinktasa?` — 2-TOP dónde-LOC-VBLZ.KA-2-Q.INF. A: `¿Tiluxu yaqumñkukhu?` ES: "¿Dónde estás tú?"
 
@@ -2310,6 +2312,7 @@ Base: §1 (L1 p.248–252: demostrativo/numeral + tamaño + color + núcleo; el 
 - Como máximo un demostrativo **o** un numeral, y un adjetivo (que cumpla `mod_clases`).
 - Un demostrativo no va con poseedor ni con posesivo.
 - Un numeral excluye PL en el núcleo (§13 #11).
+- Las frases de lugar (ALL, ABL, LOC, UNTIL) no llevan numeral (v1.1.2).
 
 Ejemplo:
 - B: `Jiwasaxa uka jumpu kirpu nirqañäniwa.` — 4-TOP ese grande perro comprar-4>3.FUT-AFF.
@@ -2382,7 +2385,8 @@ Base: §3.2 (SIMP: presente o pasado; FUT: futuro; REM: pasado).
 
 | `ADV_T.subcat` | Tiempos permitidos |
 |---|---|
-| `pasado` | SIMP (no progresivo), REM.C, REM.L |
+| `pasado` ("ayer") | SIMP (no progresivo) |
+| `pasado_remoto` ("antes") | SIMP (no progresivo), REM.C, REM.L |
 | `presente` | SIMP (incluido el progresivo) |
 | `futuro` | FUT |
 
@@ -2427,7 +2431,8 @@ interrogativos:                                                      # CH-906
   donde_estar: {palabra: INT.DONDE, ids: [LOC, VBLZ.KA, PERS, Q.INF], reemplaza: PREDICADO}
 coordinacion: {miembros: 2, sufijo: COM, funciones: [S_3a_persona, OD], prohibida_en: [negativa, pregunta_info], excluye: [COM]}   # CH-907
 adv_tiempo_compatibilidad:                                           # CH-917
-  pasado: [SIMP, REM.C, REM.L]
+  pasado: [SIMP]
+  pasado_remoto: [SIMP, REM.C, REM.L]
   presente: [SIMP]
   futuro: [FUT]
 ```
@@ -2446,7 +2451,7 @@ El rol que programa el español necesita:
 
 Base: §3.2 (SIMP "se traduce como presente o pasado", L1 p.143).
 
-- Si la idea tiene un adverbio de tiempo `pasado`: **pretérito indefinido** ("fui").
+- Si la idea tiene un adverbio de tiempo `pasado` o `pasado_remoto`: **pretérito indefinido** ("fui").
 - En otro caso: **presente** ("voy").
 
 Ejemplo:
@@ -2572,7 +2577,7 @@ Ejemplo:
 
 Ejemplos:
 - B: `Simllaxa jaskhi pinqarana lisquru q'aspi tulphiwa.` / A: `Simllaxu jaskhi pinqaramu lisqullu q'aspi tulphuyi.` → "La mujer le dio pan al niño en el mercado ayer."
-- B: `¿Kirpuxa kunasa lamch'i?` / A: `¿Kirpuxu mulukhu lamch'u?` → "¿Qué come el perro?"
+- B: `¿Kirpuxa kunasa lamch'i?` / A: `¿Kirpuxu sipukhu lamch'u?` → "¿Qué come el perro?"
 
 ### CH-1012 · Forma escrita del español
 
@@ -2763,6 +2768,7 @@ sujeto:                       # CH-1110
   expreso_1_2_4: {pronombre: 0.50, ninguno: 0.50}
   expreso_3:     {nombre: 0.60, pronombre: 0.20, ninguno: 0.15, coordinado: 0.05}
   genero: {m: 0.50, f: 0.50}
+sujeto_clase_humana: 0.60      # P-11: si el verbo acepta persona y otras clases, el sujeto es N_HUM con p = 0,60
 complementos:                 # CH-1111
   cuantos_opcionales: {0: 0.30, 1: 0.45, 2: 0.20, 3: 0.05}
   tipo: {tiempo: 0.30, lugar: 0.35, comcausa: 0.20, oi: 0.15}
@@ -3117,7 +3123,7 @@ Los casos marcados [ATESTIGUADO] usan **raíces reales** para que el modo B repr
 
 - Idea: `{"predicado": "verbo", "modalidad": "pregunta_info", "tiempo": "REM.C", "verbo": "L0019", "sujeto": {"persona": 2, "expreso": "pronombre"}, "interrogativo": "que_od"}`
 - B: `¿Jumaxa kunasa nirqayäta?`
-- A: `¿Tiluxu mulukhu nirqajüku?`
+- A: `¿Tiluxu sipukhu nirqajüku?`
 - ES: "¿Qué has comprado tú?"
 - Estado: patrón atestiguado
 
@@ -3203,7 +3209,7 @@ Ejemplo:
 Cada par se guarda en una línea de un archivo JSONL. Las verificaciones trabajan sobre estos campos, no sobre el texto suelto.
 
 ```json
-{"id": "P00000001", "version_spec": "1.1", "version_lexico": "1.0", "idea": {"…": "esquema CH-1102"},
+{"id": "P00000001", "version_spec": "1.1.2", "version_lexico": "1.0", "idea": {"…": "esquema CH-1102"},
  "b": "Nayaxa jaskhi wirkharu tisqthwa.", "a": "Muqixu jaskhi wirkhallu tisqphyi.",
  "es": "Yo fui al pueblo ayer.",
  "palabras_b": [["naya", ["TOP"]], ["jaskhi", []], ["wirkha", ["ALL"]], ["tisqa", ["P1", "AFF"]]],
@@ -3245,7 +3251,7 @@ Todas las verificaciones se hacen en cada par. Las de la sección H se hacen sob
 | V17 | Negativa ⇔ `jani-wa` + NEG + NEG.TI; Q.YN solo en verbo/predicado; un Q.INF y solo en interrogativos | ids | CH-904 a CH-906 | E | NEG sin `jani` |
 | V18 | Coordinación de 2 miembros con COM, sin COM aparte | ids | CH-907 | E | — |
 | **F. Idea** | | | | | |
-| V19 | La idea cumple R1 a R20 | validador de ideas | CH-1103 | D | FUT con objeto 1 |
+| V19 | La idea cumple R1 a R22 | validador de ideas | CH-1103 | D | FUT con objeto 1 |
 | V20 | Compatibilidad semántica de todas las palabras | clases de `lexico.csv` | CH-406 | D | "comer el palo" |
 | V21 | Plural del sujeto marcado según CH-913 | ids PL / PL.V / `nänaka` | CH-913 | E | sujeto plural sin marca |
 | **G. Español** | | | | | |
