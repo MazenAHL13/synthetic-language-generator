@@ -17,9 +17,10 @@ Cada pregunta da la regla afectada, el problema y una propuesta. Mientras nadie 
 - **Problema 2.** El texto de CH-601 dice "LOC solo [lleva] VBLZ.KA". `excluye` no prohíbe LOC + TOP.
 - **Propuesta.** `excluye` se aplica solo a las palabras NP_NORMAL, porque ESTAR, TENER y SER ya fijan su estructura. Además se aplica el texto de CH-601: tras LOC solo puede ir VBLZ.KA. En la v1.2, decirlo en `slots.yaml` y añadir `[LOC, TOP]`.
 
-### P-04 · Falta la fuente del filtro de palabras reales (CH-306); afecta a F2
-- **Problema.** `palabras_reales.txt` no está en `datos/`. CH-306 dice que se arma con "todas las cadenas entre acentos graves de la guía", pero la guía (`guia_estructural_aymara_v3.md`) tampoco está. Las cadenas de la especificación no sirven: mezclan formas reales con raíces inventadas (`tisqa`, `chimula`), y estas se filtrarían contra sí mismas.
-- **Propuesta.** Que el equipo entregue `palabras_reales.txt` (o la guía) antes de F2. Si no llega, la sección 6 avisa y genera las raíces sin el filtro CH-306, que queda marcado como pendiente en el informe.
+### P-06 · Modo del filtro de palabras reales (CH-306)
+- **Problema.** `palabras_reales.txt` llegó con 43.437 palabras distintas. Por su tamaño parece salir de un corpus (¿AmericasNLP?), no solo de la guía. CH-306.3 dice que el modo depende de la fuente: "guía" si solo sale de la guía (umbral 1) y "corpus" si incluye AmericasNLP (umbral 5). `generador_raices.yaml` dice `modo: guia`.
+- **Datos.** Con un léxico del tamaño de CH-407 (3.130 entradas), el modo "guía" descarta entre el 34 % y el 57 % de los candidatos según la categoría, y el "corpus" entre el 23 % y el 55 %. Ninguno pasa del 60 % (CH-306.5). Las 25 raíces de §4.1 pasan en los dos modos (ninguna palabra real empieza por ellas).
+- **Propuesta.** Que el equipo confirme de dónde sale la lista. Mientras tanto se mantiene `MODO_FILTRO = "guia"`, el valor de la especificación y el más estricto. Si la lista es de corpus, cambiar a `"corpus"` antes de generar el léxico de producción: cambiar el modo cambia las raíces (CH-309).
 
 ### P-05 · Léxico de prueba frente a léxico de producción (CH-402, CH-1201); afecta a F2 y F3
 - **Problema.** `lexico_sin_raices.csv` no está. Según lo pedido, se usan las 25 entradas de §4.1, que ya traen raíz. Los 40 casos de `casos_prueba.json` esperan justo esas raíces (`lisqu`, `ch'ixra`…). Cuando llegue el léxico real, el generador de raíces dará otras y los 40 casos fallarían.
@@ -27,6 +28,7 @@ Cada pregunta da la regla afectada, el problema y una propuesta. Mientras nadie 
 
 ## Decisiones tomadas
 
+- **20-11-2026 · P-04 resuelta (CH-306).** El equipo entregó `datos/palabras_reales.txt`. La sección 6 aplica el filtro con esa lista. Queda abierto el modo (P-06).
 - **20-11-2026 · Lugar de los 40 casos (CH-1201).** Necesitan el constructor de oraciones (sección 8). La sección 4 prueba CH-710. Los 40 casos van al final de la sección 8, y la sección 10 repite todas las pruebas antes de generar. Lo decidió el responsable del proyecto.
 
 ## Errores del prototipo corregidos
