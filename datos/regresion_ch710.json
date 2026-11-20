@@ -1,0 +1,883 @@
+[
+ {
+  "raiz": "sara",
+  "ids": [
+   "P1",
+   "AFF"
+  ],
+  "esperado": "sarthwa",
+  "fuente": "L2 p.176"
+ },
+ {
+  "raiz": "manq'a",
+  "ids": [
+   "P2",
+   "AFF"
+  ],
+  "esperado": "manq'tawa",
+  "fuente": "L2 p.177"
+ },
+ {
+  "raiz": "manq'a",
+  "ids": [
+   "P4",
+   "AFF"
+  ],
+  "esperado": "manq'tanwa",
+  "fuente": "L2 p.178"
+ },
+ {
+  "raiz": "lura",
+  "ids": [
+   "P3",
+   "AFF"
+  ],
+  "esperado": "luriwa",
+  "fuente": "L2 p.61"
+ },
+ {
+  "raiz": "lura",
+  "ids": [
+   "P1",
+   "AFF"
+  ],
+  "esperado": "lurthwa",
+  "fuente": "L2 p.61"
+ },
+ {
+  "raiz": "lura",
+  "ids": [
+   "P2",
+   "AFF"
+  ],
+  "esperado": "lurtawa",
+  "fuente": "L2 p.61"
+ },
+ {
+  "raiz": "juta",
+  "ids": [
+   "P1",
+   "AFF"
+  ],
+  "esperado": "jutthwa",
+  "fuente": "L2 p.64"
+ },
+ {
+  "raiz": "manq'a",
+  "ids": [
+   "P1",
+   "AFF"
+  ],
+  "esperado": "manq'thwa",
+  "fuente": "L2 p.64"
+ },
+ {
+  "raiz": "muna",
+  "ids": [
+   "P1"
+  ],
+  "esperado": "muntha",
+  "fuente": "L2 p.61, 67"
+ },
+ {
+  "raiz": "apa",
+  "ids": [
+   "P2"
+  ],
+  "esperado": "apta",
+  "fuente": "L2 p.61"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "P1"
+  ],
+  "esperado": "sartha",
+  "fuente": "L2 p.184"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "P2"
+  ],
+  "esperado": "sarta",
+  "fuente": "L2 p.184"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "P3"
+  ],
+  "esperado": "sari",
+  "fuente": "L2 p.184"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "P4"
+  ],
+  "esperado": "sartana",
+  "fuente": "L2 p.184"
+ },
+ {
+  "raiz": "chura",
+  "ids": [
+   "P1"
+  ],
+  "esperado": "churtha",
+  "fuente": "L2 p.155"
+ },
+ {
+  "raiz": "chura",
+  "ids": [
+   "P3"
+  ],
+  "esperado": "churi",
+  "fuente": "L2 p.155"
+ },
+ {
+  "raiz": "manq'a",
+  "ids": [
+   "P3"
+  ],
+  "esperado": "manq'i",
+  "fuente": "L2 p.243"
+ },
+ {
+  "raiz": "awata",
+  "ids": [
+   "P3"
+  ],
+  "esperado": "awati",
+  "fuente": "L2 p.68"
+ },
+ {
+  "raiz": "irnaqa",
+  "ids": [
+   "P1"
+  ],
+  "esperado": "irnaqtha",
+  "fuente": "L2 p.160–161"
+ },
+ {
+  "raiz": "chura",
+  "ids": [
+   "T12"
+  ],
+  "esperado": "chursma",
+  "fuente": "L2 p.179"
+ },
+ {
+  "raiz": "chura",
+  "ids": [
+   "T21"
+  ],
+  "esperado": "churista",
+  "fuente": "L2 p.179"
+ },
+ {
+  "raiz": "chura",
+  "ids": [
+   "T31"
+  ],
+  "esperado": "churitu",
+  "fuente": "L2 p.180"
+ },
+ {
+  "raiz": "chura",
+  "ids": [
+   "T32"
+  ],
+  "esperado": "churtama",
+  "fuente": "L2 p.180"
+ },
+ {
+  "raiz": "chura",
+  "ids": [
+   "T34"
+  ],
+  "esperado": "churistu",
+  "fuente": "L2 p.180"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "FUT.1"
+  ],
+  "esperado": "sarä",
+  "fuente": "L2 p.55, 187"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "FUT.2"
+  ],
+  "esperado": "saräta",
+  "fuente": "L2 p.187"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "FUT.3"
+  ],
+  "esperado": "sarani",
+  "fuente": "L2 p.189"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "FUT.4"
+  ],
+  "esperado": "sarañäni",
+  "fuente": "L2 p.190"
+ },
+ {
+  "raiz": "chura",
+  "ids": [
+   "FUT.1"
+  ],
+  "esperado": "churä",
+  "fuente": "L2 p.55"
+ },
+ {
+  "raiz": "chura",
+  "ids": [
+   "FUT.2"
+  ],
+  "esperado": "churäta",
+  "fuente": "L2 p.55"
+ },
+ {
+  "raiz": "chura",
+  "ids": [
+   "FUT.3"
+  ],
+  "esperado": "churani",
+  "fuente": "L2 p.55"
+ },
+ {
+  "raiz": "chura",
+  "ids": [
+   "FUT.4"
+  ],
+  "esperado": "churañäni",
+  "fuente": "L2 p.55"
+ },
+ {
+  "raiz": "juta",
+  "ids": [
+   "FUT.3"
+  ],
+  "esperado": "jutani",
+  "fuente": "L2 p.156"
+ },
+ {
+  "raiz": "juta",
+  "ids": [
+   "FUT.3",
+   "Q.YN"
+  ],
+  "esperado": "jutaniti",
+  "fuente": "L2 p.235"
+ },
+ {
+  "raiz": "achu",
+  "ids": [
+   "FUT.3",
+   "AFF"
+  ],
+  "esperado": "achuniwa",
+  "fuente": "L2 p.234"
+ },
+ {
+  "raiz": "lura",
+  "ids": [
+   "FUT.4",
+   "AFF"
+  ],
+  "esperado": "lurañäniwa",
+  "fuente": "L2 p.61"
+ },
+ {
+  "raiz": "thuqhu",
+  "ids": [
+   "FUT.4"
+  ],
+  "esperado": "thuqhuñäni",
+  "fuente": "L2 p.200"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "REM.C",
+   "P1"
+  ],
+  "esperado": "sarayätha",
+  "fuente": "L2 p.185"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "REM.C",
+   "P2"
+  ],
+  "esperado": "sarayäta",
+  "fuente": "L2 p.185"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "REM.C",
+   "P3.REM"
+  ],
+  "esperado": "saräna",
+  "fuente": "L2 p.185"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "REM.C",
+   "P4"
+  ],
+  "esperado": "sarayätana",
+  "fuente": "L2 p.185"
+ },
+ {
+  "raiz": "muna",
+  "ids": [
+   "REM.C",
+   "P1"
+  ],
+  "esperado": "munayätha",
+  "fuente": "L2 p.56"
+ },
+ {
+  "raiz": "muna",
+  "ids": [
+   "REM.C",
+   "P3.REM"
+  ],
+  "esperado": "munäna",
+  "fuente": "L2 p.56"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "REM.L",
+   "P1"
+  ],
+  "esperado": "saratätha",
+  "fuente": "L2 p.186"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "REM.L",
+   "P2"
+  ],
+  "esperado": "saratäta",
+  "fuente": "L2 p.186"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "REM.L",
+   "P3.REM"
+  ],
+  "esperado": "saratäna",
+  "fuente": "L2 p.186"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "REM.L",
+   "P4"
+  ],
+  "esperado": "saratätana",
+  "fuente": "L2 p.186"
+ },
+ {
+  "raiz": "muna",
+  "ids": [
+   "REM.L",
+   "P1"
+  ],
+  "esperado": "munatätha",
+  "fuente": "L2 p.56"
+ },
+ {
+  "raiz": "muna",
+  "ids": [
+   "REM.L",
+   "P3.REM"
+  ],
+  "esperado": "munatäna",
+  "fuente": "L2 p.56"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "PL.V",
+   "P1"
+  ],
+  "esperado": "sarapxtha",
+  "fuente": "L2 p.181"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "PL.V",
+   "P3"
+  ],
+  "esperado": "sarapxi",
+  "fuente": "L2 p.181, 184"
+ },
+ {
+  "raiz": "jikisi",
+  "ids": [
+   "PL.V",
+   "P3"
+  ],
+  "esperado": "jikisipxi",
+  "fuente": "L2 p.160"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "PL.V",
+   "FUT.2"
+  ],
+  "esperado": "sarapxäta",
+  "fuente": "L2 p.181"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "PL.V",
+   "REM.C",
+   "P1"
+  ],
+  "esperado": "sarapxayätha",
+  "fuente": "L2 p.181"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "PL.V",
+   "REM.C",
+   "P3.REM"
+  ],
+  "esperado": "sarapxäna",
+  "fuente": "L2 p.185"
+ },
+ {
+  "raiz": "sara",
+  "ids": [
+   "PROG",
+   "P3"
+  ],
+  "esperado": "saraski",
+  "fuente": "L2 p.202 (patrón de saraskaña)"
+ },
+ {
+  "raiz": "iki",
+  "ids": [
+   "PROG",
+   "P3"
+  ],
+  "esperado": "ikiski",
+  "fuente": "L2 p.167"
+ },
+ {
+  "raiz": "juta",
+  "ids": [
+   "NEG",
+   "FUT.3",
+   "NEG.TI"
+  ],
+  "esperado": "jutkaniti",
+  "fuente": "L2 p.231"
+ },
+ {
+  "raiz": "uta",
+  "ids": [
+   "LOC",
+   "VBLZ.KA",
+   "P1",
+   "AFF"
+  ],
+  "esperado": "utankthwa",
+  "fuente": "L2 p.50"
+ },
+ {
+  "raiz": "uta",
+  "ids": [
+   "POSR",
+   "VBLZ.LONG",
+   "P1",
+   "AFF"
+  ],
+  "esperado": "utanithwa",
+  "fuente": "L2 p.57"
+ },
+ {
+  "raiz": "masi",
+  "ids": [
+   "PL",
+   "POSR",
+   "VBLZ.LONG",
+   "P1",
+   "AFF"
+  ],
+  "esperado": "masinakanithwa",
+  "fuente": "L2 p.47"
+ },
+ {
+  "raiz": "uta",
+  "ids": [
+   "POSR",
+   "AFF"
+  ],
+  "esperado": "utaniwa",
+  "fuente": "L2 p.49–52"
+ },
+ {
+  "raiz": "jach'a",
+  "ids": [
+   "VBLZ.LONG",
+   "P1",
+   "AFF"
+  ],
+  "esperado": "jach'äthwa",
+  "fuente": "L2 p.51"
+ },
+ {
+  "raiz": "uta",
+  "ids": [
+   "POSS.1"
+  ],
+  "esperado": "utaja",
+  "fuente": "L2 p.149"
+ },
+ {
+  "raiz": "phisi",
+  "ids": [
+   "POSS.2"
+  ],
+  "esperado": "phisima",
+  "fuente": "L2 p.148"
+ },
+ {
+  "raiz": "anu",
+  "ids": [
+   "POSS.3"
+  ],
+  "esperado": "anupa",
+  "fuente": "L2 p.148"
+ },
+ {
+  "raiz": "phuchha",
+  "ids": [
+   "POSS.4"
+  ],
+  "esperado": "phuchhasa",
+  "fuente": "L2 p.148"
+ },
+ {
+  "raiz": "anu",
+  "ids": [
+   "PL"
+  ],
+  "esperado": "anunaka",
+  "fuente": "L2 p.152"
+ },
+ {
+  "raiz": "uta",
+  "ids": [
+   "PL",
+   "POSS.1",
+   "LOC"
+  ],
+  "esperado": "utanakajana",
+  "fuente": "L2 p.162"
+ },
+ {
+  "raiz": "tata",
+  "ids": [
+   "POSS.1",
+   "GEN"
+  ],
+  "esperado": "tatajana",
+  "fuente": "L2 p.154"
+ },
+ {
+  "raiz": "uta",
+  "ids": [
+   "POSS.3"
+  ],
+  "esperado": "utapa",
+  "fuente": "L2 p.154"
+ },
+ {
+  "raiz": "wawa",
+  "ids": [
+   "COMPL.RU"
+  ],
+  "esperado": "wawaru",
+  "fuente": "L2 p.155"
+ },
+ {
+  "raiz": "tata",
+  "ids": [
+   "POSS.2",
+   "COMPL.RU"
+  ],
+  "esperado": "tatamaru",
+  "fuente": "L2 p.155"
+ },
+ {
+  "raiz": "marka",
+  "ids": [
+   "ALL"
+  ],
+  "esperado": "markaru",
+  "fuente": "L2 p.156"
+ },
+ {
+  "raiz": "uta",
+  "ids": [
+   "ALL",
+   "AFF"
+  ],
+  "esperado": "utaruwa",
+  "fuente": "L2 p.68"
+ },
+ {
+  "raiz": "marka",
+  "ids": [
+   "ABL"
+  ],
+  "esperado": "markata",
+  "fuente": "L2 p.255"
+ },
+ {
+  "raiz": "marka",
+  "ids": [
+   "POSS.1",
+   "ABL"
+  ],
+  "esperado": "markajata",
+  "fuente": "L2 p.158"
+ },
+ {
+  "raiz": "qala",
+  "ids": [
+   "ABL",
+   "AFF"
+  ],
+  "esperado": "qalatawa",
+  "fuente": "L2 p.158–159"
+ },
+ {
+  "raiz": "pampa",
+  "ids": [
+   "LOC"
+  ],
+  "esperado": "pampana",
+  "fuente": "L2 p.158"
+ },
+ {
+  "raiz": "uka",
+  "ids": [
+   "LOC"
+  ],
+  "esperado": "ukana",
+  "fuente": "L2 p.160"
+ },
+ {
+  "raiz": "wawa",
+  "ids": [
+   "POSS.3",
+   "BEN"
+  ],
+  "esperado": "wawapataki",
+  "fuente": "L2 p.255"
+ },
+ {
+  "raiz": "jila",
+  "ids": [
+   "POSS.1",
+   "BEN",
+   "AFF"
+  ],
+  "esperado": "jilajatakiwa",
+  "fuente": "L2 p.158"
+ },
+ {
+  "raiz": "tiwula",
+  "ids": [
+   "COM"
+  ],
+  "esperado": "tiwulampi",
+  "fuente": "L2 p.160"
+ },
+ {
+  "raiz": "wallata",
+  "ids": [
+   "COM",
+   "AFF"
+  ],
+  "esperado": "wallatampiwa",
+  "fuente": "L2 p.160"
+ },
+ {
+  "raiz": "marka",
+  "ids": [
+   "UNTIL",
+   "AFF"
+  ],
+  "esperado": "markakamawa",
+  "fuente": "L2 p.160"
+ },
+ {
+  "raiz": "uta",
+  "ids": [
+   "UNTIL"
+  ],
+  "esperado": "utakama",
+  "fuente": "L2 p.62"
+ },
+ {
+  "raiz": "qullu",
+  "ids": [
+   "UNTIL"
+  ],
+  "esperado": "qullukama",
+  "fuente": "L2 p.62"
+ },
+ {
+  "raiz": "juma",
+  "ids": [
+   "CAUSE",
+   "AFF"
+  ],
+  "esperado": "jumalaykuwa",
+  "fuente": "L2 p.160"
+ },
+ {
+  "raiz": "kawki",
+  "ids": [
+   "ALL",
+   "Q.INF"
+  ],
+  "esperado": "kawkirusa",
+  "fuente": "L2 p.236"
+ },
+ {
+  "raiz": "khiti",
+  "ids": [
+   "Q.INF"
+  ],
+  "esperado": "khitisa",
+  "fuente": "L2 p.231"
+ },
+ {
+  "raiz": "naya",
+  "ids": [
+   "TOP"
+  ],
+  "esperado": "nayaxa",
+  "fuente": "L2 p.155"
+ },
+ {
+  "raiz": "juma",
+  "ids": [
+   "TOP"
+  ],
+  "esperado": "jumaxa",
+  "fuente": "L2 p.177"
+ },
+ {
+  "raiz": "jiwasa",
+  "ids": [
+   "TOP"
+  ],
+  "esperado": "jiwasaxa",
+  "fuente": "L2 p.178"
+ },
+ {
+  "raiz": "jupa",
+  "ids": [
+   "PL",
+   "TOP"
+  ],
+  "esperado": "jupanakaxa",
+  "fuente": "L2 p.184"
+ },
+ {
+  "raiz": "jani",
+  "ids": [
+   "AFF"
+  ],
+  "esperado": "janiwa",
+  "fuente": "L2 p.231"
+ },
+ {
+  "raiz": "anu",
+  "ids": [
+   "TOP"
+  ],
+  "esperado": "anuxa",
+  "fuente": "L2 p.243"
+ },
+ {
+  "raiz": "tata",
+  "ids": [
+   "TOP"
+  ],
+  "esperado": "tataxa",
+  "fuente": "L2 p.68"
+ },
+ {
+  "raiz": "awicha",
+  "ids": [
+   "TOP"
+  ],
+  "esperado": "awichaxa",
+  "fuente": "L2 p.68"
+ },
+ {
+  "raiz": "jilaqata",
+  "ids": [
+   "TOP"
+  ],
+  "esperado": "jilaqataxa",
+  "fuente": "L2 p.231"
+ },
+ {
+  "raiz": "jila",
+  "ids": [
+   "POSS.2",
+   "TOP"
+  ],
+  "esperado": "jilamaxa",
+  "fuente": "L2 p.235"
+ },
+ {
+  "raiz": "mama",
+  "ids": [
+   "POSS.1",
+   "AFF"
+  ],
+  "esperado": "mamajawa",
+  "fuente": "L2 p.230"
+ },
+ {
+  "raiz": "mara",
+  "ids": [
+   "TOP"
+  ],
+  "esperado": "maraxa",
+  "fuente": "L2 p.234"
+ }
+]

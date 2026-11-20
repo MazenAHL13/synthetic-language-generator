@@ -1,0 +1,2004 @@
+[
+ {
+  "id": "C01",
+  "cubre": "SIMP 1>3 · V_DITR · COMPL.RU · OD · pronombre 1 · posicion_wa=ninguna",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "SIMP",
+   "verbo": "LV03",
+   "sujeto": {
+    "persona": 1,
+    "expreso": "pronombre"
+   },
+   "oi": {
+    "funcion": "COMPL.RU",
+    "np": {
+     "n": "LV01",
+     "genero": "m"
+    }
+   },
+   "od": {
+    "n": "LV02"
+   },
+   "posicion_wa": "ninguna"
+  },
+  "esperado": {
+   "b": "Nayaxa wawaru t'ant'a churtha.",
+   "a": "Muqixu wawallu t'ant'a churphi.",
+   "es": "Yo le doy pan al niño."
+  },
+  "palabras": [
+   [
+    "naya",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "wawa",
+    [
+     "COMPL.RU"
+    ]
+   ],
+   [
+    "t'ant'a",
+    []
+   ],
+   [
+    "chura",
+    [
+     "P1"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": "Nayaxa wawaru t'ant'a churtha.",
+  "fuente": "L2 p.155 (10.1 #1)",
+  "traduccion_l2": "Yo le di pan al niño"
+ },
+ {
+  "id": "C02",
+  "cubre": "SIMP 3>3 · sujeto omitido · COMPL.RU + POSS.2 · ninguna",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "SIMP",
+   "verbo": "LV03",
+   "sujeto": {
+    "persona": 3,
+    "expreso": "ninguno",
+    "genero": "m"
+   },
+   "oi": {
+    "funcion": "COMPL.RU",
+    "np": {
+     "n": "LV04",
+     "poss": 2
+    }
+   },
+   "od": {
+    "n": "LV02"
+   },
+   "posicion_wa": "ninguna"
+  },
+  "esperado": {
+   "b": "Tatamaru t'ant'a churi.",
+   "a": "Tataqillu t'ant'a churu.",
+   "es": "Le da pan a tu padre."
+  },
+  "palabras": [
+   [
+    "tata",
+    [
+     "POSS.2",
+     "COMPL.RU"
+    ]
+   ],
+   [
+    "t'ant'a",
+    []
+   ],
+   [
+    "chura",
+    [
+     "P3"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": "Tatamaru t'ant'a churi.",
+  "fuente": "L2 p.155 (10.1 #2)",
+  "traduccion_l2": "Le dio pan a tu padre"
+ },
+ {
+  "id": "C03",
+  "cubre": "FUT 3 · V_MOV · ALL · ninguna",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "FUT",
+   "verbo": "LV06",
+   "sujeto": {
+    "persona": 3,
+    "expreso": "ninguno",
+    "genero": "m"
+   },
+   "lugar": {
+    "caso": "ALL",
+    "np": {
+     "n": "LV05"
+    }
+   },
+   "posicion_wa": "ninguna"
+  },
+  "esperado": {
+   "b": "Markaru jutani.",
+   "a": "Markallu jutaphu.",
+   "es": "Vendrá al pueblo."
+  },
+  "palabras": [
+   [
+    "marka",
+    [
+     "ALL"
+    ]
+   ],
+   [
+    "juta",
+    [
+     "FUT.3"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": "Markaru jutani.",
+  "fuente": "L2 p.156 (10.1 #3)",
+  "traduccion_l2": "Vendrá al pueblo"
+ },
+ {
+  "id": "C04",
+  "cubre": "SIMP 1 · AFF en verbo",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "SIMP",
+   "verbo": "LV07",
+   "sujeto": {
+    "persona": 1,
+    "expreso": "pronombre"
+   },
+   "posicion_wa": "verbo"
+  },
+  "esperado": {
+   "b": "Nayaxa sarthwa.",
+   "a": "Muqixu sarphyi.",
+   "es": "Yo voy."
+  },
+  "palabras": [
+   [
+    "naya",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "sara",
+    [
+     "P1",
+     "AFF"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": "Nayaxa sarthwa.",
+  "fuente": "L2 p.176 (10.1 #4)",
+  "traduccion_l2": "Yo voy/fui"
+ },
+ {
+  "id": "C05",
+  "cubre": "SIMP 2 · AFF en verbo",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "SIMP",
+   "verbo": "LV08",
+   "sujeto": {
+    "persona": 2,
+    "expreso": "pronombre"
+   },
+   "posicion_wa": "verbo"
+  },
+  "esperado": {
+   "b": "Jumaxa manq'tawa.",
+   "a": "Tiluxu manq'kuyi.",
+   "es": "Tú comes."
+  },
+  "palabras": [
+   [
+    "juma",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "manq'a",
+    [
+     "P2",
+     "AFF"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": "Jumaxa manq'tawa.",
+  "fuente": "L2 p.177 (10.1 #5)",
+  "traduccion_l2": "Tú comes/comiste"
+ },
+ {
+  "id": "C06",
+  "cubre": "SIMP 4 · AFF en verbo",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "SIMP",
+   "verbo": "LV08",
+   "sujeto": {
+    "persona": 4,
+    "expreso": "pronombre"
+   },
+   "posicion_wa": "verbo"
+  },
+  "esperado": {
+   "b": "Jiwasaxa manq'tanwa.",
+   "a": "Wiqutuxu manq'kilyi.",
+   "es": "Nosotros comemos."
+  },
+  "palabras": [
+   [
+    "jiwasa",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "manq'a",
+    [
+     "P4",
+     "AFF"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": "Jiwasaxa manq'tanwa.",
+  "fuente": "L2 p.178 (10.1 #6)",
+  "traduccion_l2": "Nosotros comemos/comimos"
+ },
+ {
+  "id": "C07",
+  "cubre": "SIMP 3 · OD · sujeto nombre · ninguna",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "SIMP",
+   "verbo": "LV09",
+   "sujeto": {
+    "persona": 3,
+    "expreso": "nombre",
+    "np": {
+     "n": "LV10"
+    }
+   },
+   "od": {
+    "n": "LV02"
+   },
+   "posicion_wa": "ninguna"
+  },
+  "esperado": {
+   "b": "Anuxa t'ant'a manq'i.",
+   "a": "Anuxu t'ant'a manq'u.",
+   "es": "El perro come pan."
+  },
+  "palabras": [
+   [
+    "anu",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "t'ant'a",
+    []
+   ],
+   [
+    "manq'a",
+    [
+     "P3"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": "Anuxa t'ant'a manq'i.",
+  "fuente": "L2 p.243 (10.1 #10)",
+  "traduccion_l2": "El perro come pan"
+ },
+ {
+  "id": "C08",
+  "cubre": "SIMP 3 · ALL · posicion_wa=complemento",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "SIMP",
+   "verbo": "LV07",
+   "sujeto": {
+    "persona": 3,
+    "expreso": "nombre",
+    "np": {
+     "n": "LV04"
+    }
+   },
+   "lugar": {
+    "caso": "ALL",
+    "np": {
+     "n": "LV11"
+    }
+   },
+   "posicion_wa": "complemento"
+  },
+  "esperado": {
+   "b": "Tataxa utaruwa sari.",
+   "a": "Tataxu utalluyi saru.",
+   "es": "El padre va a la casa."
+  },
+  "palabras": [
+   [
+    "tata",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "uta",
+    [
+     "ALL",
+     "AFF"
+    ]
+   ],
+   [
+    "sara",
+    [
+     "P3"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": "Tataxa utaruwa sari.",
+  "fuente": "L2 p.68 (10.1 #12)",
+  "traduccion_l2": "El padre/señor fue/va a la casa"
+ },
+ {
+  "id": "C09",
+  "cubre": "Negativa FUT 3",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "negativa",
+   "tiempo": "FUT",
+   "verbo": "LV06",
+   "sujeto": {
+    "persona": 3,
+    "expreso": "nombre",
+    "np": {
+     "n": "LV13"
+    }
+   }
+  },
+  "esperado": {
+   "b": "Jilaqataxa janiwa jutkaniti.",
+   "a": "Jilaqataxu yuliyi jutñuphuji.",
+   "es": "La autoridad no vendrá."
+  },
+  "palabras": [
+   [
+    "jilaqata",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "jani",
+    [
+     "AFF"
+    ]
+   ],
+   [
+    "juta",
+    [
+     "NEG",
+     "FUT.3",
+     "NEG.TI"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": "Jilaqataxa janiwa jutkaniti.",
+  "fuente": "L2 p.231 (10.1 #15)",
+  "traduccion_l2": "La autoridad no vendrá"
+ },
+ {
+  "id": "C10",
+  "cubre": "Pregunta sí/no FUT 3 · POSS.2",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "pregunta_si_no",
+   "tiempo": "FUT",
+   "verbo": "LV06",
+   "sujeto": {
+    "persona": 3,
+    "expreso": "nombre",
+    "np": {
+     "n": "LV12",
+     "poss": 2,
+     "genero": "m"
+    }
+   }
+  },
+  "esperado": {
+   "b": "¿Jilamaxa jutaniti?",
+   "a": "¿Jilaqixu jutaphuji?",
+   "es": "¿Tu hermano vendrá?"
+  },
+  "palabras": [
+   [
+    "jila",
+    [
+     "POSS.2",
+     "TOP"
+    ]
+   ],
+   [
+    "juta",
+    [
+     "FUT.3",
+     "Q.YN"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": "¿Jilamaxa jutaniti?",
+  "fuente": "L2 p.235 (10.1 #16)",
+  "traduccion_l2": "¿Vendrá tu hermano?"
+ },
+ {
+  "id": "C11",
+  "cubre": "Coordinación de sujeto · PL.V · posicion_wa=sujeto",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "SIMP",
+   "verbo": "LV17",
+   "sujeto": {
+    "persona": 3,
+    "plural": true,
+    "expreso": "coordinado",
+    "coord": [
+     {
+      "n": "LV15"
+     },
+     {
+      "n": "LV16"
+     }
+    ]
+   },
+   "posicion_wa": "sujeto"
+  },
+  "esperado": {
+   "b": "Tiwulampi wallatampiwa jikisipxi.",
+   "a": "Tiwulanku wallatankuyi jikisimtu.",
+   "es": "El zorro y el ganso se encuentran."
+  },
+  "palabras": [
+   [
+    "tiwula",
+    [
+     "COM"
+    ]
+   ],
+   [
+    "wallata",
+    [
+     "COM",
+     "AFF"
+    ]
+   ],
+   [
+    "jikisi",
+    [
+     "PL.V",
+     "P3"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": "Tiwulampi wallatampiwa jikisipxi.",
+  "fuente": "L2 p.160 (10.1 #19)",
+  "traduccion_l2": "El zorro y el ganso se encuentran"
+ },
+ {
+  "id": "C12",
+  "cubre": "Plural 3 (pronombre + PL.V) · ninguna",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "SIMP",
+   "verbo": "LV07",
+   "sujeto": {
+    "persona": 3,
+    "plural": true,
+    "expreso": "pronombre",
+    "genero": "m"
+   },
+   "posicion_wa": "ninguna"
+  },
+  "esperado": {
+   "b": "Jupanakaxa sarapxi.",
+   "a": "Kaxisuluxu saramtu.",
+   "es": "Ellos van."
+  },
+  "palabras": [
+   [
+    "jupa",
+    [
+     "PL",
+     "TOP"
+    ]
+   ],
+   [
+    "sara",
+    [
+     "PL.V",
+     "P3"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": "Jupanakaxa sarapxi.",
+  "fuente": "L2 p.184 (10.1 #20)",
+  "traduccion_l2": "Ellos/ellas van/fueron"
+ },
+ {
+  "id": "C13",
+  "cubre": "SIMP 1 · sujeto omitido · OD · ninguna",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "SIMP",
+   "verbo": "LV18",
+   "sujeto": {
+    "persona": 1,
+    "expreso": "ninguno"
+   },
+   "od": {
+    "n": "LV02"
+   },
+   "posicion_wa": "ninguna"
+  },
+  "esperado": {
+   "b": "T'ant'a muntha.",
+   "a": "T'ant'a munphi.",
+   "es": "Quiero pan."
+  },
+  "palabras": [
+   [
+    "t'ant'a",
+    []
+   ],
+   [
+    "muna",
+    [
+     "P1"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": "T'ant'a muntha.",
+  "fuente": "L2 p.67 (10.1 #22)",
+  "traduccion_l2": "Quiero pan"
+ },
+ {
+  "id": "C14",
+  "cubre": "FUT 3 · POSS.1 · posicion_wa=sujeto",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "FUT",
+   "verbo": "LV06",
+   "sujeto": {
+    "persona": 3,
+    "expreso": "nombre",
+    "np": {
+     "n": "LV14",
+     "poss": 1
+    }
+   },
+   "posicion_wa": "sujeto"
+  },
+  "esperado": {
+   "b": "Mamajawa jutani.",
+   "a": "Mamaluyi jutaphu.",
+   "es": "Mi mamá vendrá."
+  },
+  "palabras": [
+   [
+    "mama",
+    [
+     "POSS.1",
+     "AFF"
+    ]
+   ],
+   [
+    "juta",
+    [
+     "FUT.3"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": "Mamajawa jutani.",
+  "fuente": "L2 p.230 (§4.1)",
+  "traduccion_l2": "Mi mamá vendrá"
+ },
+ {
+  "id": "C15",
+  "cubre": "Pregunta de información (donde_all) · FUT 4",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "pregunta_info",
+   "tiempo": "FUT",
+   "verbo": "LV07",
+   "sujeto": {
+    "persona": 4,
+    "expreso": "ninguno"
+   },
+   "interrogativo": "donde_all",
+   "lugar": {
+    "caso": "ALL"
+   }
+  },
+  "esperado": {
+   "b": "¿Kawkirusa sarañäni?",
+   "a": "¿Yaqullukhu sarathäqi?",
+   "es": "¿A dónde iremos?"
+  },
+  "palabras": [
+   [
+    "kawki",
+    [
+     "ALL",
+     "Q.INF"
+    ]
+   ],
+   [
+    "sara",
+    [
+     "FUT.4"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": "¿Kawkirusa sarañäni?",
+  "fuente": "L2 p.236 (§4.1)",
+  "traduccion_l2": "¿A dónde iremos?"
+ },
+ {
+  "id": "C16",
+  "cubre": "UNTIL · posicion_wa=complemento",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "SIMP",
+   "verbo": "LV07",
+   "sujeto": {
+    "persona": 3,
+    "expreso": "ninguno",
+    "genero": "m"
+   },
+   "lugar": {
+    "caso": "UNTIL",
+    "np": {
+     "n": "LV05"
+    }
+   },
+   "posicion_wa": "complemento"
+  },
+  "esperado": {
+   "b": "Markakamawa sari.",
+   "a": "Markachiwiyi saru.",
+   "es": "Va hasta el pueblo."
+  },
+  "palabras": [
+   [
+    "marka",
+    [
+     "UNTIL",
+     "AFF"
+    ]
+   ],
+   [
+    "sara",
+    [
+     "P3"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": "Markakamawa sari.",
+  "fuente": "L2 p.160 (§2.1)",
+  "traduccion_l2": "Fue hasta el pueblo"
+ },
+ {
+  "id": "C17",
+  "cubre": "FUT 1 · ninguna",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "FUT",
+   "verbo": "LV07",
+   "sujeto": {
+    "persona": 1,
+    "expreso": "pronombre"
+   },
+   "posicion_wa": "ninguna"
+  },
+  "esperado": {
+   "b": "Nayaxa sarä.",
+   "a": "Muqixu sarä.",
+   "es": "Yo iré."
+  },
+  "palabras": [
+   [
+    "naya",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "sara",
+    [
+     "FUT.1"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": "Nayaxa sarä.",
+  "fuente": "L2 p.55 (§8.2)",
+  "traduccion_l2": "Yo iré"
+ },
+ {
+  "id": "C18",
+  "cubre": "Transición 1>2",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "SIMP",
+   "verbo": "L0017",
+   "sujeto": {
+    "persona": 1,
+    "expreso": "pronombre"
+   },
+   "objeto_persona": 2,
+   "posicion_wa": "verbo"
+  },
+  "esperado": {
+   "b": "Nayaxa ch'ixrsmawa.",
+   "a": "Muqixu ch'ixrjmiyi.",
+   "es": "Yo te veo."
+  },
+  "palabras": [
+   [
+    "naya",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "ch'ixra",
+    [
+     "T12",
+     "AFF"
+    ]
+   ]
+  ],
+  "dv": [
+   "DV-02"
+  ],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C19",
+  "cubre": "Transición 2>1 · pregunta sí/no",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "pregunta_si_no",
+   "tiempo": "SIMP",
+   "verbo": "L0017",
+   "sujeto": {
+    "persona": 2,
+    "expreso": "pronombre"
+   },
+   "objeto_persona": 1
+  },
+  "esperado": {
+   "b": "¿Jumaxa ch'ixristati?",
+   "a": "¿Tiluxu ch'ixrulqaji?",
+   "es": "¿Tú me ves?"
+  },
+  "palabras": [
+   [
+    "juma",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "ch'ixra",
+    [
+     "T21",
+     "Q.YN"
+    ]
+   ]
+  ],
+  "dv": [
+   "DV-02"
+  ],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C20",
+  "cubre": "Transición 3>1 · V_DITR · pronombre con COMPL.RU · demostrativo",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "SIMP",
+   "verbo": "L0018",
+   "sujeto": {
+    "persona": 3,
+    "expreso": "pronombre",
+    "genero": "m"
+   },
+   "objeto_persona": 1,
+   "oi_pronombre_expreso": true,
+   "oi": {
+    "funcion": "COMPL.RU"
+   },
+   "od": {
+    "n": "L0006",
+    "dem": "DEM.1"
+   },
+   "posicion_wa": "verbo"
+  },
+  "esperado": {
+   "b": "Jupaxa nayaru aka q'aspi tulphituwa.",
+   "a": "Kaxixu muqillu ilmi q'aspi tulphuquyi.",
+   "es": "Él me da este pan."
+  },
+  "palabras": [
+   [
+    "jupa",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "naya",
+    [
+     "COMPL.RU"
+    ]
+   ],
+   [
+    "aka",
+    []
+   ],
+   [
+    "q'aspi",
+    []
+   ],
+   [
+    "tulpha",
+    [
+     "T31",
+     "AFF"
+    ]
+   ]
+  ],
+  "dv": [
+   "DV-02"
+  ],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C21",
+  "cubre": "Transición 3>2 · adverbio pasado con TOP (sin sujeto) · SIMP → pretérito",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "SIMP",
+   "verbo": "L0017",
+   "sujeto": {
+    "persona": 3,
+    "expreso": "ninguno",
+    "genero": "f"
+   },
+   "objeto_persona": 2,
+   "adv_t": "L0023",
+   "posicion_wa": "verbo"
+  },
+  "esperado": {
+   "b": "Jaskhixa ch'ixrtamwa.",
+   "a": "Jaskhixu ch'ixrkiqyi.",
+   "es": "Te vio ayer."
+  },
+  "palabras": [
+   [
+    "jaskhi",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "ch'ixra",
+    [
+     "T32",
+     "AFF"
+    ]
+   ]
+  ],
+  "dv": [
+   "DV-01"
+  ],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C22",
+  "cubre": "Transición 3>4 · negativa SIMP",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "negativa",
+   "tiempo": "SIMP",
+   "verbo": "L0017",
+   "sujeto": {
+    "persona": 3,
+    "expreso": "nombre",
+    "np": {
+     "n": "L0008"
+    }
+   },
+   "objeto_persona": 4
+  },
+  "esperado": {
+   "b": "Kirpuxa janiwa ch'ixrkistuti.",
+   "a": "Kirpuxu yuliyi ch'ixrñulquji.",
+   "es": "El perro no nos ve."
+  },
+  "palabras": [
+   [
+    "kirpu",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "jani",
+    [
+     "AFF"
+    ]
+   ],
+   [
+    "ch'ixra",
+    [
+     "NEG",
+     "T34",
+     "NEG.TI"
+    ]
+   ]
+  ],
+  "dv": [
+   "DV-02",
+   "DV-08"
+  ],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C23",
+  "cubre": "REM.C 1 plural (nänaka + PL.V) · ABL",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "REM.C",
+   "verbo": "L0014",
+   "sujeto": {
+    "persona": 1,
+    "plural": true,
+    "expreso": "pronombre"
+   },
+   "lugar": {
+    "caso": "ABL",
+    "np": {
+     "n": "L0009"
+    }
+   },
+   "posicion_wa": "verbo"
+  },
+  "esperado": {
+   "b": "Nänakaxa pinqarata pajllapxayäthwa.",
+   "a": "Müsuluxu pinqaraku pajllamtujüphyi.",
+   "es": "Nosotros hemos venido del mercado."
+  },
+  "palabras": [
+   [
+    "nänaka",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "pinqara",
+    [
+     "ABL"
+    ]
+   ],
+   [
+    "pajlla",
+    [
+     "PL.V",
+     "REM.C",
+     "P1",
+     "AFF"
+    ]
+   ]
+  ],
+  "dv": [
+   "DV-05"
+  ],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C24",
+  "cubre": "REM.L 2 · coordinación de OD · ninguna",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "REM.L",
+   "verbo": "L0017",
+   "sujeto": {
+    "persona": 2,
+    "expreso": "pronombre"
+   },
+   "od_coord": [
+    {
+     "n": "L0008"
+    },
+    {
+     "n": "L0011"
+    }
+   ],
+   "posicion_wa": "ninguna"
+  },
+  "esperado": {
+   "b": "Jumaxa kirpumpi jitqumpi ch'ixratäta.",
+   "a": "Tiluxu kirpunku jitqunku ch'ixrawüku.",
+   "es": "Tú habías visto el perro y el cuchillo."
+  },
+  "palabras": [
+   [
+    "juma",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "kirpu",
+    [
+     "COM"
+    ]
+   ],
+   [
+    "jitqu",
+    [
+     "COM"
+    ]
+   ],
+   [
+    "ch'ixra",
+    [
+     "REM.L",
+     "P2"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C25",
+  "cubre": "REM.L 4 plural · ALL + CAUSE · posicion_wa=complemento",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "REM.L",
+   "verbo": "L0013",
+   "sujeto": {
+    "persona": 4,
+    "plural": true,
+    "expreso": "pronombre"
+   },
+   "lugar": {
+    "caso": "ALL",
+    "np": {
+     "n": "L0007"
+    }
+   },
+   "comcausa": {
+    "caso": "CAUSE",
+    "np": {
+     "n": "L0012"
+    }
+   },
+   "posicion_wa": "complemento"
+  },
+  "esperado": {
+   "b": "Jiwasanakaxa wirkharu ch'alqulaykuwa tisqapxatätana.",
+   "a": "Wiqutusuluxu wirkhallu ch'alqutiwqayi tisqamtuwükilu.",
+   "es": "Nosotros habíamos ido al pueblo por la deuda."
+  },
+  "palabras": [
+   [
+    "jiwasa",
+    [
+     "PL",
+     "TOP"
+    ]
+   ],
+   [
+    "wirkha",
+    [
+     "ALL"
+    ]
+   ],
+   [
+    "ch'alqu",
+    [
+     "CAUSE",
+     "AFF"
+    ]
+   ],
+   [
+    "tisqa",
+    [
+     "PL.V",
+     "REM.L",
+     "P4"
+    ]
+   ]
+  ],
+  "dv": [
+   "DV-06"
+  ],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C26",
+  "cubre": "REM.C 3 plural (nombre + PL.V) · BEN · OD",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "REM.C",
+   "verbo": "L0019",
+   "sujeto": {
+    "persona": 3,
+    "plural": true,
+    "expreso": "nombre",
+    "np": {
+     "n": "L0003",
+     "plural": true,
+     "genero": "m"
+    }
+   },
+   "oi": {
+    "funcion": "BEN",
+    "np": {
+     "n": "L0001",
+     "genero": "f"
+    }
+   },
+   "od": {
+    "n": "L0006"
+   },
+   "posicion_wa": "verbo"
+  },
+  "esperado": {
+   "b": "Yaruqhinakaxa lisqutaki q'aspi nirqapxänawa.",
+   "a": "Yaruqhisuluxu lisqupuli q'aspi nirqamtümuyi.",
+   "es": "Los maestros han comprado pan para la niña."
+  },
+  "palabras": [
+   [
+    "yaruqhi",
+    [
+     "PL",
+     "TOP"
+    ]
+   ],
+   [
+    "lisqu",
+    [
+     "BEN"
+    ]
+   ],
+   [
+    "q'aspi",
+    []
+   ],
+   [
+    "nirqa",
+    [
+     "PL.V",
+     "REM.C",
+     "P3.REM",
+     "AFF"
+    ]
+   ]
+  ],
+  "dv": [
+   "DV-05"
+  ],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C27",
+  "cubre": "FUT 2 · GEN (poseedor) + POSS.3 · adverbio futuro · ninguna",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "FUT",
+   "verbo": "L0017",
+   "sujeto": {
+    "persona": 2,
+    "expreso": "pronombre"
+   },
+   "adv_t": "L0024",
+   "od": {
+    "n": "L0005",
+    "poseedor": {
+     "n": "L0003",
+     "genero": "m"
+    }
+   },
+   "posicion_wa": "ninguna"
+  },
+  "esperado": {
+   "b": "Jumaxa sik'uyu yaruqhina chimulapa ch'ixräta.",
+   "a": "Tiluxu sik'uyu yaruqhimu chimulachu ch'ixräku.",
+   "es": "Tú verás la casa del maestro mañana."
+  },
+  "palabras": [
+   [
+    "juma",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "sik'uyu",
+    []
+   ],
+   [
+    "yaruqhi",
+    [
+     "GEN"
+    ]
+   ],
+   [
+    "chimula",
+    [
+     "POSS.3"
+    ]
+   ],
+   [
+    "ch'ixra",
+    [
+     "FUT.2"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C28",
+  "cubre": "Negativa FUT 4 · COM instrumento · OD",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "negativa",
+   "tiempo": "FUT",
+   "verbo": "L0020",
+   "sujeto": {
+    "persona": 4,
+    "expreso": "pronombre"
+   },
+   "comcausa": {
+    "caso": "COM",
+    "np": {
+     "n": "L0011"
+    }
+   },
+   "od": {
+    "n": "L0006"
+   }
+  },
+  "esperado": {
+   "b": "Jiwasaxa janiwa jitqumpi q'aspi k'iymkañäniti.",
+   "a": "Wiqutuxu yuliyi jitqunku q'aspi k'iymñuthäqiji.",
+   "es": "Nosotros no cortaremos pan con el cuchillo."
+  },
+  "palabras": [
+   [
+    "jiwasa",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "jani",
+    [
+     "AFF"
+    ]
+   ],
+   [
+    "jitqu",
+    [
+     "COM"
+    ]
+   ],
+   [
+    "q'aspi",
+    []
+   ],
+   [
+    "k'iyma",
+    [
+     "NEG",
+     "FUT.4",
+     "NEG.TI"
+    ]
+   ]
+  ],
+  "dv": [
+   "DV-04",
+   "DV-08"
+  ],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C29",
+  "cubre": "Negativa SIMP 2 plural · LOC",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "negativa",
+   "tiempo": "SIMP",
+   "verbo": "L0015",
+   "sujeto": {
+    "persona": 2,
+    "plural": true,
+    "expreso": "pronombre"
+   },
+   "lugar": {
+    "caso": "LOC",
+    "np": {
+     "n": "L0005"
+    }
+   }
+  },
+  "esperado": {
+   "b": "Jumanakaxa janiwa chimulana nuyk'ktati.",
+   "a": "Tilusuluxu yuliyi chimulamu nuyk'ñkuji.",
+   "es": "Ustedes no duermen en la casa."
+  },
+  "palabras": [
+   [
+    "juma",
+    [
+     "PL",
+     "TOP"
+    ]
+   ],
+   [
+    "jani",
+    [
+     "AFF"
+    ]
+   ],
+   [
+    "chimula",
+    [
+     "LOC"
+    ]
+   ],
+   [
+    "nuyk'a",
+    [
+     "NEG",
+     "P2",
+     "NEG.TI"
+    ]
+   ]
+  ],
+  "dv": [
+   "DV-03",
+   "DV-08"
+  ],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C30",
+  "cubre": "Progresivo 1 · adverbio presente · LOC deíctico · OD",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "afirmativa",
+   "tiempo": "SIMP",
+   "aspecto": "progresivo",
+   "verbo": "L0020",
+   "sujeto": {
+    "persona": 1,
+    "expreso": "pronombre"
+   },
+   "adv_t": "L0025",
+   "lugar": {
+    "caso": "LOC",
+    "deictico": "DEM.1"
+   },
+   "od": {
+    "n": "L0006"
+   },
+   "posicion_wa": "verbo"
+  },
+  "esperado": {
+   "b": "Nayaxa nuspi akana q'aspi k'iymaskthwa.",
+   "a": "Muqixu nuspi ilmimu q'aspi k'iymanchphyi.",
+   "es": "Yo estoy cortando pan aquí ahora."
+  },
+  "palabras": [
+   [
+    "naya",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "nuspi",
+    []
+   ],
+   [
+    "aka",
+    [
+     "LOC"
+    ]
+   ],
+   [
+    "q'aspi",
+    []
+   ],
+   [
+    "k'iyma",
+    [
+     "PROG",
+     "P1",
+     "AFF"
+    ]
+   ]
+  ],
+  "dv": [
+   "DV-09"
+  ],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C31",
+  "cubre": "Pregunta de información (quien_suj) · FUT · ALL",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "pregunta_info",
+   "tiempo": "FUT",
+   "verbo": "L0013",
+   "sujeto": {
+    "persona": 3
+   },
+   "interrogativo": "quien_suj",
+   "lugar": {
+    "caso": "ALL",
+    "np": {
+     "n": "L0009"
+    }
+   }
+  },
+  "esperado": {
+   "b": "¿Khitisa pinqararu tisqani?",
+   "a": "¿Simukhu pinqarallu tisqaphu?",
+   "es": "¿Quién irá al mercado?"
+  },
+  "palabras": [
+   [
+    "khiti",
+    [
+     "Q.INF"
+    ]
+   ],
+   [
+    "pinqara",
+    [
+     "ALL"
+    ]
+   ],
+   [
+    "tisqa",
+    [
+     "FUT.3"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C32",
+  "cubre": "Pregunta de información (que_od) · REM.C 2",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "pregunta_info",
+   "tiempo": "REM.C",
+   "verbo": "L0019",
+   "sujeto": {
+    "persona": 2,
+    "expreso": "pronombre"
+   },
+   "interrogativo": "que_od"
+  },
+  "esperado": {
+   "b": "¿Jumaxa kunasa nirqayäta?",
+   "a": "¿Tiluxu mulukhu nirqajüku?",
+   "es": "¿Qué has comprado tú?"
+  },
+  "palabras": [
+   [
+    "juma",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "kuna",
+    [
+     "Q.INF"
+    ]
+   ],
+   [
+    "nirqa",
+    [
+     "REM.C",
+     "P2"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C33",
+  "cubre": "Pregunta de información (quien_oi) · SIMP 2",
+  "idea": {
+   "predicado": "verbo",
+   "modalidad": "pregunta_info",
+   "tiempo": "SIMP",
+   "verbo": "L0018",
+   "sujeto": {
+    "persona": 2,
+    "expreso": "ninguno"
+   },
+   "interrogativo": "quien_oi",
+   "oi": {
+    "funcion": "COMPL.RU"
+   },
+   "od": {
+    "n": "L0006"
+   }
+  },
+  "esperado": {
+   "b": "¿Khitirusa q'aspi tulphta?",
+   "a": "¿Simullukhu q'aspi tulphku?",
+   "es": "¿A quién le das pan?"
+  },
+  "palabras": [
+   [
+    "khiti",
+    [
+     "COMPL.RU",
+     "Q.INF"
+    ]
+   ],
+   [
+    "q'aspi",
+    []
+   ],
+   [
+    "tulpha",
+    [
+     "P2"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C34",
+  "cubre": "Estar · pregunta de información (donde_estar) · 3",
+  "idea": {
+   "predicado": "estar",
+   "modalidad": "pregunta_info",
+   "sujeto": {
+    "persona": 3,
+    "expreso": "nombre",
+    "np": {
+     "n": "L0008"
+    }
+   },
+   "interrogativo": "donde_estar",
+   "pnom": {}
+  },
+  "esperado": {
+   "b": "¿Kirpuxa kawkinkisa?",
+   "a": "¿Kirpuxu yaqumñukhu?",
+   "es": "¿Dónde está el perro?"
+  },
+  "palabras": [
+   [
+    "kirpu",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "kawki",
+    [
+     "LOC",
+     "VBLZ.KA",
+     "P3",
+     "Q.INF"
+    ]
+   ]
+  ],
+  "dv": [
+   "DV-10"
+  ],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C35",
+  "cubre": "Ser + adjetivo · 4 plural",
+  "idea": {
+   "predicado": "ser",
+   "modalidad": "afirmativa",
+   "sujeto": {
+    "persona": 4,
+    "plural": true,
+    "expreso": "pronombre"
+   },
+   "pnom": {
+    "adj": "L0021"
+   }
+  },
+  "esperado": {
+   "b": "Jiwasanakaxa jumpütanwa.",
+   "a": "Wiqutusuluxu jumpükilyi.",
+   "es": "Nosotros somos grandes."
+  },
+  "palabras": [
+   [
+    "jiwasa",
+    [
+     "PL",
+     "TOP"
+    ]
+   ],
+   [
+    "jumpu",
+    [
+     "VBLZ.LONG",
+     "P4",
+     "AFF"
+    ]
+   ]
+  ],
+  "dv": [
+   "DV-12"
+  ],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C36",
+  "cubre": "Ser + nombre · demostrativo plural (3)",
+  "idea": {
+   "predicado": "ser",
+   "modalidad": "afirmativa",
+   "sujeto": {
+    "persona": 3,
+    "plural": true,
+    "expreso": "demostrativo",
+    "dem": "DEM.2"
+   },
+   "pnom": {
+    "np": {
+     "n": "L0005"
+    }
+   }
+  },
+  "esperado": {
+   "b": "Ukanakaxa chimulanakawa.",
+   "a": "Ulmisuluxu chimulasuluyi.",
+   "es": "Esas son casas."
+  },
+  "palabras": [
+   [
+    "uka",
+    [
+     "PL",
+     "TOP"
+    ]
+   ],
+   [
+    "chimula",
+    [
+     "PL",
+     "AFF"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C37",
+  "cubre": "Ser + nombre humano (3) · sin artículo",
+  "idea": {
+   "predicado": "ser",
+   "modalidad": "afirmativa",
+   "sujeto": {
+    "persona": 3,
+    "expreso": "nombre",
+    "np": {
+     "n": "L0004"
+    }
+   },
+   "pnom": {
+    "np": {
+     "n": "L0003",
+     "genero": "f"
+    }
+   }
+  },
+  "esperado": {
+   "b": "Simllaxa yaruqhiwa.",
+   "a": "Simllaxu yaruqhiyi.",
+   "es": "La mujer es maestra."
+  },
+  "palabras": [
+   [
+    "simlla",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "yaruqhi",
+    [
+     "AFF"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C38",
+  "cubre": "Estar + POSS.4 · pregunta sí/no · 3",
+  "idea": {
+   "predicado": "estar",
+   "modalidad": "pregunta_si_no",
+   "sujeto": {
+    "persona": 3,
+    "expreso": "nombre",
+    "np": {
+     "n": "L0008"
+    }
+   },
+   "pnom": {
+    "np": {
+     "n": "L0005",
+     "poss": 4
+    }
+   }
+  },
+  "esperado": {
+   "b": "¿Kirpuxa chimulasankiti?",
+   "a": "¿Kirpuxu chimulakhumñuji?",
+   "es": "¿El perro está en nuestra casa?"
+  },
+  "palabras": [
+   [
+    "kirpu",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "chimula",
+    [
+     "POSS.4",
+     "LOC",
+     "VBLZ.KA",
+     "P3",
+     "Q.YN"
+    ]
+   ]
+  ],
+  "dv": [
+   "DV-10",
+   "DV-13"
+  ],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C39",
+  "cubre": "Tener + adjetivo · pregunta sí/no · 2",
+  "idea": {
+   "predicado": "tener",
+   "modalidad": "pregunta_si_no",
+   "sujeto": {
+    "persona": 2,
+    "expreso": "pronombre"
+   },
+   "pnom": {
+    "np": {
+     "n": "L0005",
+     "adj": "L0021"
+    }
+   }
+  },
+  "esperado": {
+   "b": "¿Jumaxa jumpu chimulanitati?",
+   "a": "¿Tiluxu jumpu chimulaphukuji?",
+   "es": "¿Tú tienes una casa grande?"
+  },
+  "palabras": [
+   [
+    "juma",
+    [
+     "TOP"
+    ]
+   ],
+   [
+    "jumpu",
+    []
+   ],
+   [
+    "chimula",
+    [
+     "POSR",
+     "VBLZ.LONG",
+     "P2",
+     "Q.YN"
+    ]
+   ]
+  ],
+  "dv": [
+   "DV-11",
+   "DV-13"
+  ],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ },
+ {
+  "id": "C40",
+  "cubre": "Tener + numeral · 3 plural",
+  "idea": {
+   "predicado": "tener",
+   "modalidad": "afirmativa",
+   "sujeto": {
+    "persona": 3,
+    "plural": true,
+    "expreso": "nombre",
+    "np": {
+     "n": "L0002",
+     "plural": true,
+     "genero": "m"
+    }
+   },
+   "pnom": {
+    "np": {
+     "n": "L0008",
+     "num": "NUM.3"
+    }
+   }
+  },
+  "esperado": {
+   "b": "Pultiyanakaxa kimsa kirpuniwa.",
+   "a": "Pultiyasuluxu musqi kirpuphuyi.",
+   "es": "Los hermanos tienen tres perros."
+  },
+  "palabras": [
+   [
+    "pultiya",
+    [
+     "PL",
+     "TOP"
+    ]
+   ],
+   [
+    "kimsa",
+    []
+   ],
+   [
+    "kirpu",
+    [
+     "POSR",
+     "AFF"
+    ]
+   ]
+  ],
+  "dv": [],
+  "atestiguado": null,
+  "fuente": null,
+  "traduccion_l2": null
+ }
+]
