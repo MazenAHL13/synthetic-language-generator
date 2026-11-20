@@ -1,0 +1,50 @@
+{
+  "datos/casos_prueba.json": {
+    "mtime": 1795203458.6701398,
+    "seen": 1795204546.8877609,
+    "ast_hash": "903844328e8a9519ce4f27fddf0747ef",
+    "semantic_hash": "903844328e8a9519ce4f27fddf0747ef"
+  },
+  "datos/chulupi_motor.py": {
+    "mtime": 1795203458.670507,
+    "seen": 1795204546.887764,
+    "ast_hash": "16e3e67c28978b2bddf839cf1f7dfb5e",
+    "semantic_hash": "16e3e67c28978b2bddf839cf1f7dfb5e"
+  },
+  "datos/chulupi_oraciones.py": {
+    "mtime": 1795143034.5867968,
+    "seen": 1795204546.8877661,
+    "ast_hash": "1e1b15b5cd65e6c276feb648111bd0e0",
+    "semantic_hash": "1e1b15b5cd65e6c276feb648111bd0e0"
+  },
+  "datos/regresion_ch710.json": {
+    "mtime": 1795143042.5025277,
+    "seen": 1795204546.8877661,
+    "ast_hash": "13c57d3044fe1b798693ca6e9198c6ee",
+    "semantic_hash": "13c57d3044fe1b798693ca6e9198c6ee"
+  },
+  "datos/test_chulupi.py": {
+    "mtime": 1795143039.4413476,
+    "seen": 1795204546.887767,
+    "ast_hash": "94fef0a14b8982a66c414004f8e97e7f",
+    "semantic_hash": "94fef0a14b8982a66c414004f8e97e7f"
+  },
+  "PREGUNTAS.md": {
+    "mtime": 1795204162.8545065,
+    "seen": 1795204546.887767,
+    "ast_hash": "38f647520225228e45032e2d64c65fbe",
+    "semantic_hash": "38f647520225228e45032e2d64c65fbe"
+  },
+  "claude.md": {
+    "mtime": 1795184148.112424,
+    "seen": 1795204546.887768,
+    "ast_hash": "c683e5639935545d4b18ca33fdcceb94",
+    "semantic_hash": "c683e5639935545d4b18ca33fdcceb94"
+  },
+  "datos/chulupi_lang_spec.md": {
+    "mtime": 1795203599.9523976,
+    "seen": 1795204546.887768,
+    "ast_hash": "08486552c6300ae7d8a60801f9b1b980",
+    "semantic_hash": "08486552c6300ae7d8a60801f9b1b980"
+  }
+}
