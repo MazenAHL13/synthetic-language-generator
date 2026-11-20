@@ -34,20 +34,24 @@ Cada pregunta da la regla afectada, el problema y una propuesta. Mientras nadie 
 - **Problema.** CH-1104 fija la persona del sujeto en la cuota. CH-1109 dice que "se elige primero la transición; fija la persona del sujeto". Las dos cosas no pueden pasar a la vez.
 - **Propuesta.** Manda la cuota (CH-1104). En SIMP, con un verbo `obj_persona = s`, la transición se sortea solo entre `objeto_3` y las transiciones cuyo sujeto es la persona de la cuota, renormalizando los pesos. Con persona 4 no hay transición. Así, las transiciones salen algo menos que el 7 % cada una.
 
-### P-11 · Zipf entre categorías de verbos (CH-403)
-- **Problema.** CH-403 define Zipf dentro de cada categoría. Para elegir el verbo de una idea hay que mezclar `V_INTR`, `V_MOV`, `V_TR` y `V_DITR`, y no se dice cuánto pesa cada categoría.
-- **Propuesta.** Zipf sobre todas las candidatas juntas, ordenadas por (rango, id). Los verbos de rango 1 de cada categoría pesan lo mismo. Lo mismo vale para los nombres cuando se aceptan `N_HUM` y `N_NOHUM`.
+### P-11 · Zipf cuando un nombre puede ser `N_HUM` o `N_NOHUM` (CH-402, CH-403)
+- **Decidido para los verbos (v1.1.1).** El rango de CH-402 es dentro de cada categoría, así que no se mezclan categorías. Se sortea la categoría del verbo con `categoria_verbo` (`pesos.yaml`) y después Zipf dentro de ella.
+- **Sigue abierto para los nombres.** Algunas funciones aceptan nombres de las dos categorías: un sujeto `persona|animal`, la compañía (COM) o CAUSE (`abstracto` o `persona`). No hay pesos de categoría para nombres.
+- **Propuesta.** Se sortea la categoría en proporción al número de candidatas de cada una, y después Zipf dentro de ella. Si el equipo prefiere otros pesos, añadir `categoria_nombre` a `pesos.yaml`.
 
 ### P-12 · Adverbio de tiempo con "ser", "estar" y "tener" (CH-901, CH-1011)
 - **Problema.** CH-901 dice que en estos predicados "no hay posiciones 4 a 7", así que la posición 3 (tiempo) quedaría permitida. Pero CH-1011 ("sujeto – verbo – predicado") y el español del prototipo no escriben el adverbio: "Yo tengo pan ayer" saldría sin "ayer" en español.
 - **Propuesta.** Estos predicados no llevan `adv_t`. El validador lo rechaza (CH-908) y el generador no lo sortea.
 
-### P-13 · COM: ¿instrumento o compañía? (CH-406, CH-1111)
-- **Problema.** `pesos.yaml` da COM 0,70 / CAUSE 0,30, pero no dice cómo elegir entre instrumento y compañía cuando un verbo admite las dos.
-- **Propuesta.** Si el verbo tiene `instr_clases`, COM es instrumento. Si no, es compañía (`persona` o `animal`; solo `V_MOV` y `V_INTR` con sujeto `persona`).
-
 ## Decisiones tomadas
 
+- **20-11-2026 · Especificación 1.1.1.** Cambios copiados en `datos/artificial_lang_spec.md`:
+  - CH-406: BEN solo con `V_TR` y `V_DITR`; `V_MOV` y `V_INTR` no llevan objeto indirecto.
+  - CH-1103: R21 (un lexema no se repite en la idea) y R22 (solo entradas `L…` del léxico de producción; `LV01`–`LV18` solo para pruebas).
+  - `pesos.yaml`: `categoria_verbo` y `oi_otros` → `oi_V_TR`.
+  - El notebook comprueba la versión 1.1.1. Lo decidió el responsable del proyecto.
+- **20-11-2026 · P-11 (verbos).** Primero la categoría con `categoria_verbo`, después Zipf dentro de ella. Los nombres siguen abiertos (P-11). Lo decidió el responsable del proyecto.
+- **20-11-2026 · P-13 confirmada.** COM es instrumento si el verbo tiene `instr_clases`. Si no, es compañía, solo con `V_MOV` o `V_INTR` y sujeto `persona` (también `khiti`, CH-906). Si no cabe ninguna de las dos, no hay COM. Una prueba lo comprueba en 10.000 ideas.
 - **20-11-2026 · P-07 resuelta (§10).** El borrador de las conjugaciones forma parte de la tarea. La celda 7.2 genera `datos/conjugaciones.csv` con un conjugador propio, sin bibliotecas: regulares, cambios de vocal, cambios de escritura y una tabla de irregulares. Cada fila nueva lleva `revisado = n`; el notebook avisa sin detenerse, y las filas que ya existen no se tocan nunca. Control: para los 10 verbos del prototipo da exactamente sus formas. El error claro queda solo para los verbos que no están en la tabla. Lo decidió el responsable del proyecto.
 - **20-11-2026 · P-08 resuelta (CH-1008, regla 5).** Era un error de la especificación; el prototipo tenía razón. La regla 5 pasa a decir: "nombre no humano: 'un / una' si es contable y singular; nada si es plural o no contable". Se corrigió en `datos/artificial_lang_spec.md` y en el notebook, con una prueba ("Ese es pan."). Lo decidió el responsable del proyecto.
 - **20-11-2026 · P-04 resuelta (CH-306).** El equipo entregó `datos/palabras_reales.txt`. La sección 6 aplica el filtro con esa lista. Queda abierto el modo (P-06).

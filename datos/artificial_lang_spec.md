@@ -1,6 +1,6 @@
 # Chulupi Lang — Especificación v1
 
-**Versión:** 1.1 (corrige la parte 1 de la 1.0: CH-104, CH-306, CH-308; añade CH-406 y CH-407) · **Fuente única:** `guia_estructural_aymara_v3.md` (en adelante, "la guía").
+**Versión:** 1.1.1 (CH-406: BEN solo con `V_TR` y `V_DITR`; CH-1103: R21 y R22; `pesos.yaml`: `categoria_verbo` y `oi_V_TR`; CH-1008, regla 5: no contables sin artículo). La 1.1 corrigió la parte 1 de la 1.0 (CH-104, CH-306, CH-308) y añadió CH-406 y CH-407 · **Fuente única:** `guia_estructural_aymara_v3.md` (en adelante, "la guía").
 **Para quién:** el equipo que programa el generador. No hace falta saber lingüística: cada regla dice qué hacer, con ejemplos.
 
 ## Cómo leer este documento
@@ -731,7 +731,7 @@ Base: decisión del equipo (v1.1). Un lenguaje artificial cuyas palabras co-ocur
 | Sujeto | `suj_clases` del verbo. Los pronombres de 1.ª, 2.ª y 4.ª persona y `jupa` cuentan como `persona`. |
 | Objeto directo | `obj_clases` del verbo; nunca `persona` (CH-914). |
 | COMPL.RU | `persona` (CH-909). |
-| BEN | `persona`. |
+| BEN | `persona`; solo con `V_TR` y `V_DITR` (v1.1.1). `V_MOV` y `V_INTR` no llevan objeto indirecto. |
 | COM, instrumento | `instr_clases` del verbo; si es `-`, el verbo no admite instrumento. |
 | COM, compañía | `persona` o `animal`; solo con `V_MOV` o `V_INTR` y sujeto de clase `persona`. |
 | LOC | `loc_clases` del verbo; si es `-`: `lugar` o `vivienda`; si es `NINGUNA`: no admite LOC. Los `V_MOV` llevan siempre `NINGUNA`. |
@@ -2707,6 +2707,8 @@ El generador las cumple y el validador (CH-1301) las vuelve a comprobar.
 | R18 | `coord` / `od_coord` ⇒ no negativa, no pregunta_info, `comcausa.caso ≠ COM` | CH-907 |
 | R19 | `genero` obligatorio en todo referente humano de 3.ª persona cuyo español dependa del género | CH-1010 |
 | R20 | Todas las palabras compatibles según CH-406 | CH-406 |
+| R21 | Un mismo lexema no aparece dos veces en la idea (evita "para los niños con el niño") | v1.1.1 |
+| R22 | Solo entradas `L…` del léxico de producción; nunca las del léxico de validación `LV01`–`LV18` | §12.1 |
 
 Ejemplo de rechazo:
 - Idea con `tiempo = FUT`, `objeto_persona = 1`: R1 falla y se descarta.
@@ -2739,6 +2741,7 @@ predicado_modalidad:          # CH-1105 (suma 1)
   estar.pregunta_info: 0.015
   tener.afirmativa: 0.07
   tener.pregunta_si_no: 0.02
+categoria_verbo: {V_INTR: 0.20, V_MOV: 0.25, V_TR: 0.40, V_DITR: 0.15}   # P-11: se sortea la categoría y luego Zipf dentro (CH-403)
 tiempo:                       # CH-1106 (solo verbales)
   general:  {SIMP: 0.40, FUT: 0.25, REM.C: 0.15, REM.L: 0.20}
   negativa: {SIMP: 0.60, FUT: 0.40}
@@ -2767,7 +2770,7 @@ complementos:                 # CH-1111
   lugar_LOC: {np: 0.75, deictico: 0.25}
   comcausa: {COM: 0.70, CAUSE: 0.30}
   oi_V_DITR: {COMPL.RU: 0.70, BEN: 0.30}
-  oi_otros: {BEN: 1.00}
+  oi_V_TR: {BEN: 1.00}           # BEN solo con V_TR y V_DITR (CH-406, v1.1.1)
   oi_pronombre_expreso: 0.40     # en transiciones con V_DITR
   od_coord: 0.05
 np:                           # CH-1112
